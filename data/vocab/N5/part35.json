@@ -1,0 +1,127 @@
+[
+  {
+    "question": "鍵",
+    "answer1": "かぎ",
+    "answer2": "Chìa khóa"
+  },
+  {
+    "question": "ベッド",
+    "answer1": "ベッド",
+    "answer2": "Giường"
+  },
+  {
+    "question": "ダイニングキッチン",
+    "answer1": "ダイニングキッチン",
+    "answer2": "Phòng ăn và bếp"
+  },
+  {
+    "question": "和室",
+    "answer1": "わしつ",
+    "answer2": "Phòng kiểu Nhật"
+  },
+  {
+    "question": "トイレ／お手洗い",
+    "answer1": "トイレ／おてあらい",
+    "answer2": "Nhà vệ sinh"
+  },
+  {
+    "question": "布団",
+    "answer1": "ふとん",
+    "answer2": "Chăn, đệm"
+  },
+  {
+    "question": "テーブル",
+    "answer1": "テーブル",
+    "answer2": "Bàn"
+  },
+  {
+    "question": "机",
+    "answer1": "つくえ",
+    "answer2": "Bàn học, bàn làm việc"
+  },
+  {
+    "question": "椅子",
+    "answer1": "いす",
+    "answer2": "Ghế"
+  },
+  {
+    "question": "座る",
+    "answer1": "すわる",
+    "answer2": "Ngồi"
+  },
+  {
+    "question": "立つ",
+    "answer1": "たつ",
+    "answer2": "Đứng"
+  },
+  {
+    "question": "洗濯<する>",
+    "answer1": "せんたくする",
+    "answer2": "Giặt giũ"
+  },
+  {
+    "question": "掃除<する>",
+    "answer1": "そうじする",
+    "answer2": "Dọn dẹp"
+  },
+  {
+    "question": "ごみ",
+    "answer1": "ごみ",
+    "answer2": "Rác"
+  },
+  {
+    "question": "捨てる",
+    "answer1": "すてる",
+    "answer2": "Vứt"
+  },
+  {
+    "question": "置く",
+    "answer1": "おく",
+    "answer2": "Đặt, để"
+  },
+  {
+    "question": "住む",
+    "answer1": "すむ",
+    "answer2": "Sống, ở"
+  },
+  {
+    "question": "住所",
+    "answer1": "じゅうしょ",
+    "answer2": "Địa chỉ"
+  },
+  {
+    "question": "冷蔵庫",
+    "answer1": "れいぞうこ",
+    "answer2": "Tủ lạnh"
+  },
+  {
+    "question": "洗濯機",
+    "answer1": "せんたくき",
+    "answer2": "Máy giặt"
+  },
+  {
+    "question": "掃除機",
+    "answer1": "そうじき",
+    "answer2": "Máy hút bụi"
+  },
+  {
+    "question": "建物",
+    "answer1": "たてもの",
+    "answer2": "Tòa nhà (công trình)"
+  },
+  {
+    "question": "アパート",
+    "answer1": "アパート",
+    "answer2": "Chung cư"
+  },
+  {
+    "question": "寮",
+    "answer1": "りょう",
+    "answer2": "Ký túc xá"
+  },
+  {
+    "question": "ビル",
+    "answer1": "ビル",
+    "answer2": "Tòa nhà"
+  }
+]

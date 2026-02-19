@@ -1,0 +1,127 @@
+[
+  {
+    "question": "木曜日",
+    "answer1": "もくようび",
+    "answer2": "Thứ năm"
+  },
+  {
+    "question": "金曜日",
+    "answer1": "きんようび",
+    "answer2": "Thứ sáu"
+  },
+  {
+    "question": "土曜日",
+    "answer1": "どようび",
+    "answer2": "Thứ bảy"
+  },
+  {
+    "question": "何曜日",
+    "answer1": "なんようび",
+    "answer2": "Thứ mấy"
+  },
+  {
+    "question": "今日",
+    "answer1": "きょう",
+    "answer2": "Hôm nay"
+  },
+  {
+    "question": "明日",
+    "answer1": "あした",
+    "answer2": "Ngày mai"
+  },
+  {
+    "question": "昨日",
+    "answer1": "きのう",
+    "answer2": "Ngày hôm qua"
+  },
+  {
+    "question": "毎日",
+    "answer1": "まいにち",
+    "answer2": "Hàng ngày"
+  },
+  {
+    "question": "〜週間",
+    "answer1": "〜しゅうかん",
+    "answer2": "Tuần"
+  },
+  {
+    "question": "〜か月",
+    "answer1": "〜かげつ",
+    "answer2": "Tháng"
+  },
+  {
+    "question": "〜年",
+    "answer1": "〜ねん",
+    "answer2": "Năm"
+  },
+  {
+    "question": "〜回",
+    "answer1": "〜かい",
+    "answer2": "Lần"
+  },
+  {
+    "question": "何回",
+    "answer1": "なんかい",
+    "answer2": "Mấy lần"
+  },
+  {
+    "question": "アルバイト",
+    "answer1": "アルバイト",
+    "answer2": "Việc làm thêm"
+  },
+  {
+    "question": "する",
+    "answer1": "する",
+    "answer2": "Làm"
+  },
+  {
+    "question": "言葉",
+    "answer1": "ことば",
+    "answer2": "Từ ngữ"
+  },
+  {
+    "question": "字",
+    "answer1": "じ",
+    "answer2": "Chữ"
+  },
+  {
+    "question": "日本語",
+    "answer1": "にほんご",
+    "answer2": "Tiếng Nhật"
+  },
+  {
+    "question": "〜語",
+    "answer1": "〜ご",
+    "answer2": "Tiếng ~"
+  },
+  {
+    "question": "話す",
+    "answer1": "はなす",
+    "answer2": "Nói"
+  },
+  {
+    "question": "ゆっくり",
+    "answer1": "ゆっくり",
+    "answer2": "Chậm rãi"
+  },
+  {
+    "question": "言う",
+    "answer1": "いう",
+    "answer2": "Nói"
+  },
+  {
+    "question": "もう一度",
+    "answer1": "もういちど",
+    "answer2": "Một lần nữa"
+  },
+  {
+    "question": "お願いします",
+    "answer1": "おねがいします",
+    "answer2": "Xin vui lòng"
+  },
+  {
+    "question": "分かる",
+    "answer1": "わかる",
+    "answer2": "Hiểu"
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "question": "地図",
+    "answer1": "ちず",
+    "answer2": "Bản đồ"
+  },
+  {
+    "question": "世界",
+    "answer1": "せかい",
+    "answer2": "Thế giới"
+  },
+  {
+    "question": "日本",
+    "answer1": "にほん",
+    "answer2": "Nhật Bản"
+  },
+  {
+    "question": "ベトナム",
+    "answer1": "ベトナム",
+    "answer2": "Việt Nam"
+  },
+  {
+    "question": "インド",
+    "answer1": "インド",
+    "answer2": "Ấn Độ"
+  },
+  {
+    "question": "マレーシア",
+    "answer1": "マレーシア",
+    "answer2": "Malaysia"
+  },
+  {
+    "question": "インドネシア",
+    "answer1": "インドネシア",
+    "answer2": "Indonesia"
+  },
+  {
+    "question": "ミャンマー",
+    "answer1": "ミャンマー",
+    "answer2": "Myanmar"
+  },
+  {
+    "question": "韓国",
+    "answer1": "かんこく",
+    "answer2": "Hàn Quốc"
+  },
+  {
+    "question": "トルコ",
+    "answer1": "トルコ",
+    "answer2": "Thổ Nhĩ Kỳ"
+  },
+  {
+    "question": "タイ",
+    "answer1": "タイ",
+    "answer2": "Thái Lan"
+  },
+  {
+    "question": "オーストラリア",
+    "answer1": "オーストラリア",
+    "answer2": "Úc"
+  },
+  {
+    "question": "台湾",
+    "answer1": "たいわん",
+    "answer2": "Đài Loan"
+  },
+  {
+    "question": "ニュージーランド",
+    "answer1": "ニュージーランド",
+    "answer2": "New Zealand"
+  },
+  {
+    "question": "中国",
+    "answer1": "ちゅうごく",
+    "answer2": "Trung Quốc"
+  },
+  {
+    "question": "アメリカ",
+    "answer1": "アメリカ",
+    "answer2": "Mỹ"
+  },
+  {
+    "question": "ネパール",
+    "answer1": "ネパール",
+    "answer2": "Nepal"
+  },
+  {
+    "question": "カナダ",
+    "answer1": "カナダ",
+    "answer2": "Canada"
+  },
+  {
+    "question": "フィリピン",
+    "answer1": "フィリピン",
+    "answer2": "Philippines"
+  },
+  {
+    "question": "メキシコ",
+    "answer1": "メキシコ",
+    "answer2": "Mexico"
+  },
+  {
+    "question": "ブラジル",
+    "answer1": "ブラジル",
+    "answer2": "Brazil"
+  },
+  {
+    "question": "スイス",
+    "answer1": "スイス",
+    "answer2": "Thụy Sĩ"
+  },
+  {
+    "question": "ロシア",
+    "answer1": "ロシア",
+    "answer2": "Nga"
+  },
+  {
+    "question": "イタリア",
+    "answer1": "イタリア",
+    "answer2": "Ý"
+  },
+  {
+    "question": "イギリス",
+    "answer1": "イギリス",
+    "answer2": "Anh"
+  }
+]

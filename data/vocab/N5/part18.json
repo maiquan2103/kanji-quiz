@@ -1,0 +1,127 @@
+[
+  {
+    "question": "洗う",
+    "answer1": "あらう",
+    "answer2": "Rửa"
+  },
+  {
+    "question": "お風呂",
+    "answer1": "おふろ",
+    "answer2": "Bồn tắm, tắm"
+  },
+  {
+    "question": "入る",
+    "answer1": "はいる",
+    "answer2": "Vào, đi (tắm)"
+  },
+  {
+    "question": "シャワー",
+    "answer1": "シャワー",
+    "answer2": "Vòi sen"
+  },
+  {
+    "question": "浴びる",
+    "answer1": "あびる",
+    "answer2": "Tắm (vòi sen)"
+  },
+  {
+    "question": "歯",
+    "answer1": "は",
+    "answer2": "Răng"
+  },
+  {
+    "question": "磨く",
+    "answer1": "みがく",
+    "answer2": "Đánh, chải"
+  },
+  {
+    "question": "食べる",
+    "answer1": "たべる",
+    "answer2": "Ăn"
+  },
+  {
+    "question": "食べ物",
+    "answer1": "たべもの",
+    "answer2": "Đồ ăn"
+  },
+  {
+    "question": "朝ご飯",
+    "answer1": "あさごはん",
+    "answer2": "Cơm sáng"
+  },
+  {
+    "question": "昼ご飯",
+    "answer1": "ひるごはん",
+    "answer2": "Cơm trưa"
+  },
+  {
+    "question": "晩ご飯",
+    "answer1": "ばんごはん",
+    "answer2": "Cơm tối"
+  },
+  {
+    "question": "沢山",
+    "answer1": "たくさん",
+    "answer2": "Nhiều"
+  },
+  {
+    "question": "スーパー",
+    "answer1": "スーパー",
+    "answer2": "Siêu thị"
+  },
+  {
+    "question": "肉",
+    "answer1": "にく",
+    "answer2": "Thịt"
+  },
+  {
+    "question": "牛肉",
+    "answer1": "ぎゅうにく",
+    "answer2": "Thịt bò"
+  },
+  {
+    "question": "豚肉",
+    "answer1": "ぶたにく",
+    "answer2": "Thịt heo"
+  },
+  {
+    "question": "鶏肉",
+    "answer1": "とりにく",
+    "answer2": "Thịt gà"
+  },
+  {
+    "question": "魚",
+    "answer1": "さかな",
+    "answer2": "Cá"
+  },
+  {
+    "question": "卵",
+    "answer1": "たまご",
+    "answer2": "Trứng"
+  },
+  {
+    "question": "野菜",
+    "answer1": "やさい",
+    "answer2": "Rau"
+  },
+  {
+    "question": "果物",
+    "answer1": "くだもの",
+    "answer2": "Trái cây"
+  },
+  {
+    "question": "バナナ",
+    "answer1": "バナナ",
+    "answer2": "Chuối"
+  },
+  {
+    "question": "林檎",
+    "answer1": "りんご",
+    "answer2": "Táo"
+  },
+  {
+    "question": "レモン",
+    "answer1": "レモン",
+    "answer2": "Chanh"
+  }
+]

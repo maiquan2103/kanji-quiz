@@ -1,0 +1,127 @@
+[
+  {
+    "question": "ホームステイする",
+    "answer1": "ホームステイする",
+    "answer2": "Homestay"
+  },
+  {
+    "question": "町",
+    "answer1": "まち",
+    "answer2": "Phố"
+  },
+  {
+    "question": "県",
+    "answer1": "けん",
+    "answer2": "Tỉnh"
+  },
+  {
+    "question": "東京",
+    "answer1": "とうきょう",
+    "answer2": "Tokyo"
+  },
+  {
+    "question": "成田",
+    "answer1": "なりた",
+    "answer2": "Narita"
+  },
+  {
+    "question": "上野",
+    "answer1": "うえの",
+    "answer2": "Ueno"
+  },
+  {
+    "question": "浅草",
+    "answer1": "あさくさ",
+    "answer2": "Asakusa"
+  },
+  {
+    "question": "新宿",
+    "answer1": "しんじゅく",
+    "answer2": "Shinjuku"
+  },
+  {
+    "question": "秋葉原",
+    "answer1": "あきはばら",
+    "answer2": "Akihabara"
+  },
+  {
+    "question": "渋谷",
+    "answer1": "しぶや",
+    "answer2": "Shibuya"
+  },
+  {
+    "question": "銀座",
+    "answer1": "ぎんざ",
+    "answer2": "Ginza"
+  },
+  {
+    "question": "羽田",
+    "answer1": "はねだ",
+    "answer2": "Haneda"
+  },
+  {
+    "question": "横浜",
+    "answer1": "よこはま",
+    "answer2": "Yokohama"
+  },
+  {
+    "question": "鎌倉",
+    "answer1": "かまくら",
+    "answer2": "Kamakura"
+  },
+  {
+    "question": "北海道",
+    "answer1": "ほっかいどう",
+    "answer2": "Hokkaido"
+  },
+  {
+    "question": "札幌",
+    "answer1": "さっぽろ",
+    "answer2": "Sapporo"
+  },
+  {
+    "question": "大阪",
+    "answer1": "おおさか",
+    "answer2": "Osaka"
+  },
+  {
+    "question": "仙台",
+    "answer1": "せんだい",
+    "answer2": "Sendai"
+  },
+  {
+    "question": "神戸",
+    "answer1": "こうべ",
+    "answer2": "Kobe"
+  },
+  {
+    "question": "日光",
+    "answer1": "にっこう",
+    "answer2": "Nikko"
+  },
+  {
+    "question": "広島",
+    "answer1": "ひろしま",
+    "answer2": "Hiroshima"
+  },
+  {
+    "question": "富士山",
+    "answer1": "ふじさん",
+    "answer2": "Núi Phú Sĩ"
+  },
+  {
+    "question": "福岡",
+    "answer1": "ふくおか",
+    "answer2": "Fukuoka"
+  },
+  {
+    "question": "金沢",
+    "answer1": "かなざわ",
+    "answer2": "Kanazawa"
+  },
+  {
+    "question": "長崎",
+    "answer1": "ながさき",
+    "answer2": "Nagasaki"
+  }
+]

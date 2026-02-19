@@ -1,0 +1,127 @@
+[
+  {
+    "question": "写真",
+    "answer1": "しゃしん",
+    "answer2": "Ảnh"
+  },
+  {
+    "question": "取る",
+    "answer1": "とる",
+    "answer2": "Chụp"
+  },
+  {
+    "question": "カメラ",
+    "answer1": "カメラ",
+    "answer2": "Máy ảnh"
+  },
+  {
+    "question": "絵",
+    "answer1": "え",
+    "answer2": "Tranh"
+  },
+  {
+    "question": "描く",
+    "answer1": "かく",
+    "answer2": "Vẽ"
+  },
+  {
+    "question": "美術館",
+    "answer1": "びじゅつかん",
+    "answer2": "Bảo tàng mỹ thuật"
+  },
+  {
+    "question": "音楽",
+    "answer1": "おんがく",
+    "answer2": "Âm nhạc"
+  },
+  {
+    "question": "カラオケ",
+    "answer1": "カラオケ",
+    "answer2": "Karaoke"
+  },
+  {
+    "question": "一緒に",
+    "answer1": "いっしょに",
+    "answer2": "Cùng với"
+  },
+  {
+    "question": "皆で",
+    "answer1": "みんなで",
+    "answer2": "Tất cả mọi người"
+  },
+  {
+    "question": "歌",
+    "answer1": "うた",
+    "answer2": "Bài hát"
+  },
+  {
+    "question": "歌う",
+    "answer1": "うたう",
+    "answer2": "Hát"
+  },
+  {
+    "question": "コンサート",
+    "answer1": "コンサート",
+    "answer2": "Buổi hòa nhạc"
+  },
+  {
+    "question": "クラシック",
+    "answer1": "クラシック",
+    "answer2": "Nhạc cổ điển"
+  },
+  {
+    "question": "ジャズ",
+    "answer1": "ジャズ",
+    "answer2": "Nhạc jazz"
+  },
+  {
+    "question": "ポップス",
+    "answer1": "ポップス",
+    "answer2": "Nhạc pop"
+  },
+  {
+    "question": "ロック",
+    "answer1": "ロック",
+    "answer2": "Nhạc rock"
+  },
+  {
+    "question": "ピアノ",
+    "answer1": "ピアノ",
+    "answer2": "Đàn piano"
+  },
+  {
+    "question": "ギター",
+    "answer1": "ギター",
+    "answer2": "Đàn guitar"
+  },
+  {
+    "question": "弾く",
+    "answer1": "ひく",
+    "answer2": "Chơi đàn"
+  },
+  {
+    "question": "映画",
+    "answer1": "えいが",
+    "answer2": "Phim"
+  },
+  {
+    "question": "映画館",
+    "answer1": "えいがかん",
+    "answer2": "Rạp chiếu phim"
+  },
+  {
+    "question": "始まる",
+    "answer1": "はじまる",
+    "answer2": "Bắt đầu"
+  },
+  {
+    "question": "終わる",
+    "answer1": "おわる",
+    "answer2": "Kết thúc"
+  },
+  {
+    "question": "漫画",
+    "answer1": "まんが",
+    "answer2": "Truyện tranh"
+  }
+]

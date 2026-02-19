@@ -1,0 +1,127 @@
+[
+  {
+    "question": "幾つ目",
+    "answer1": "いくつめ",
+    "answer2": "Cái thứ mấy"
+  },
+  {
+    "question": "一つ目",
+    "answer1": "ひとつめ",
+    "answer2": "Cái thứ nhất"
+  },
+  {
+    "question": "二つ目",
+    "answer1": "ふたつめ",
+    "answer2": "Cái thứ hai"
+  },
+  {
+    "question": "三つ目",
+    "answer1": "みっつめ",
+    "answer2": "Cái thứ ba"
+  },
+  {
+    "question": "何メートル",
+    "answer1": "なんメートル",
+    "answer2": "Bao nhiêu mét"
+  },
+  {
+    "question": "〜メートル",
+    "answer1": "〜メートル",
+    "answer2": "Mét"
+  },
+  {
+    "question": "隣",
+    "answer1": "となり",
+    "answer2": "Bên cạnh"
+  },
+  {
+    "question": "間",
+    "answer1": "あいだ",
+    "answer2": "Giữa"
+  },
+  {
+    "question": "近く",
+    "answer1": "ちかく",
+    "answer2": "Gần"
+  },
+  {
+    "question": "上",
+    "answer1": "うえ",
+    "answer2": "Trên"
+  },
+  {
+    "question": "下",
+    "answer1": "した",
+    "answer2": "Dưới"
+  },
+  {
+    "question": "前",
+    "answer1": "まえ",
+    "answer2": "Trước"
+  },
+  {
+    "question": "後ろ",
+    "answer1": "うしろ",
+    "answer2": "Sau"
+  },
+  {
+    "question": "中",
+    "answer1": "なか",
+    "answer2": "Trong"
+  },
+  {
+    "question": "外",
+    "answer1": "そと",
+    "answer2": "Ngoài"
+  },
+  {
+    "question": "あそこ",
+    "answer1": "あそこ",
+    "answer2": "Đằng kia"
+  },
+  {
+    "question": "ここ",
+    "answer1": "ここ",
+    "answer2": "Chỗ này"
+  },
+  {
+    "question": "そこ",
+    "answer1": "そこ",
+    "answer2": "Chỗ đó"
+  },
+  {
+    "question": "どこ",
+    "answer1": "どこ",
+    "answer2": "Ở đâu"
+  },
+  {
+    "question": "出かける",
+    "answer1": "でかける",
+    "answer2": "Ra ngoài"
+  },
+  {
+    "question": "出る",
+    "answer1": "でる",
+    "answer2": "Ra, rời khỏi"
+  },
+  {
+    "question": "着く",
+    "answer1": "つく",
+    "answer2": "Đến nơi"
+  },
+  {
+    "question": "会う",
+    "answer1": "あう",
+    "answer2": "Gặp"
+  },
+  {
+    "question": "待つ",
+    "answer1": "まつ",
+    "answer2": "Chờ"
+  },
+  {
+    "question": "デート<する>",
+    "answer1": "デートする",
+    "answer2": "Hẹn hò"
+  }
+]

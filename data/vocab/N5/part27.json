@@ -1,0 +1,127 @@
+[
+  {
+    "question": "〜と",
+    "answer1": "〜と",
+    "answer2": "Và ~"
+  },
+  {
+    "question": "〜や〜[等]",
+    "answer1": "〜や〜など",
+    "answer2": "~ và ~ (v.v.)"
+  },
+  {
+    "question": "幾ら",
+    "answer1": "いくら",
+    "answer2": "Bao nhiêu tiền"
+  },
+  {
+    "question": "円",
+    "answer1": "えん",
+    "answer2": "Yên"
+  },
+  {
+    "question": "高い",
+    "answer1": "たかい",
+    "answer2": "Đắt"
+  },
+  {
+    "question": "安い",
+    "answer1": "やすい",
+    "answer2": "Rẻ"
+  },
+  {
+    "question": "百",
+    "answer1": "ひゃく",
+    "answer2": "Trăm"
+  },
+  {
+    "question": "千",
+    "answer1": "せん",
+    "answer2": "Ngàn"
+  },
+  {
+    "question": "万",
+    "answer1": "まん",
+    "answer2": "Mười ngàn"
+  },
+  {
+    "question": "億",
+    "answer1": "おく",
+    "answer2": "Trăm triệu"
+  },
+  {
+    "question": "一寸",
+    "answer1": "ちょっと",
+    "answer2": "Một chút"
+  },
+  {
+    "question": "では",
+    "answer1": "では",
+    "answer2": "Vậy thì"
+  },
+  {
+    "question": "じゃ",
+    "answer1": "じゃ",
+    "answer2": "Vậy thì"
+  },
+  {
+    "question": "お金",
+    "answer1": "おかね",
+    "answer2": "Tiền"
+  },
+  {
+    "question": "払い",
+    "answer1": "はらい",
+    "answer2": "Thanh toán"
+  },
+  {
+    "question": "お釣り",
+    "answer1": "おつり",
+    "answer2": "Tiền thối"
+  },
+  {
+    "question": "細かいお金",
+    "answer1": "こまかいおかね",
+    "answer2": "Tiền lẻ"
+  },
+  {
+    "question": "足りる",
+    "answer1": "たりる",
+    "answer2": "Đủ"
+  },
+  {
+    "question": "生活",
+    "answer1": "せいかつ",
+    "answer2": "Sinh hoạt, cuộc sống"
+  },
+  {
+    "question": "物価",
+    "answer1": "ぶっか",
+    "answer2": "Vật giá"
+  },
+  {
+    "question": "幾つ",
+    "answer1": "いくつ",
+    "answer2": "Mấy cái, bao nhiêu cái"
+  },
+  {
+    "question": "全部で",
+    "answer1": "ぜんぶで",
+    "answer2": "Tổng cộng"
+  },
+  {
+    "question": "店",
+    "answer1": "みせ",
+    "answer2": "Cửa hàng"
+  },
+  {
+    "question": "〜屋",
+    "answer1": "〜や",
+    "answer2": "Tiệm ~"
+  },
+  {
+    "question": "デパート",
+    "answer1": "デパート",
+    "answer2": "Bách hóa, TTTM"
+  }
+]

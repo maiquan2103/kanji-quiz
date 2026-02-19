@@ -1,0 +1,127 @@
+[
+  {
+    "question": "各駅",
+    "answer1": "かくえき",
+    "answer2": "Các ga"
+  },
+  {
+    "question": "急行",
+    "answer1": "きゅうこう",
+    "answer2": "Tàu nhanh"
+  },
+  {
+    "question": "特急",
+    "answer1": "とっきゅう",
+    "answer2": "Tàu tốc hành"
+  },
+  {
+    "question": "新幹線",
+    "answer1": "しんかんせん",
+    "answer2": "Tàu cao tốc Shinkansen"
+  },
+  {
+    "question": "地下鉄",
+    "answer1": "ちかてつ",
+    "answer2": "Tàu điện ngầm"
+  },
+  {
+    "question": "〜番線",
+    "answer1": "〜ばんせん",
+    "answer2": "Tuyến số ~"
+  },
+  {
+    "question": "何番線",
+    "answer1": "なんばんせん",
+    "answer2": "Tuyến số mấy"
+  },
+  {
+    "question": "自動車",
+    "answer1": "じどうしゃ",
+    "answer2": "Xe hơi (các loại xe có động cơ)"
+  },
+  {
+    "question": "車",
+    "answer1": "くるま",
+    "answer2": "Xe cộ"
+  },
+  {
+    "question": "運転<する>",
+    "answer1": "うんてんする",
+    "answer2": "Lái xe"
+  },
+  {
+    "question": "送る",
+    "answer1": "おくる",
+    "answer2": "Tiễn, đưa"
+  },
+  {
+    "question": "駐車場",
+    "answer1": "ちゅうしゃじょう",
+    "answer2": "Bãi đậu xe"
+  },
+  {
+    "question": "止める",
+    "answer1": "とめる",
+    "answer2": "Đậu, dừng (xe)"
+  },
+  {
+    "question": "自転車",
+    "answer1": "じてんしゃ",
+    "answer2": "Xe đạp"
+  },
+  {
+    "question": "バイク",
+    "answer1": "バイク",
+    "answer2": "Xe máy"
+  },
+  {
+    "question": "バス",
+    "answer1": "バス",
+    "answer2": "Xe buýt"
+  },
+  {
+    "question": "タクシー",
+    "answer1": "タクシー",
+    "answer2": "Taxi"
+  },
+  {
+    "question": "飛行機",
+    "answer1": "ひこうき",
+    "answer2": "Máy bay"
+  },
+  {
+    "question": "船",
+    "answer1": "ふね",
+    "answer2": "Tàu, thuyền"
+  },
+  {
+    "question": "乗り場",
+    "answer1": "のりば",
+    "answer2": "Bến, trạm"
+  },
+  {
+    "question": "空港",
+    "answer1": "くうこう",
+    "answer2": "Sân bay"
+  },
+  {
+    "question": "時間",
+    "answer1": "じかん",
+    "answer2": "Thời gian"
+  },
+  {
+    "question": "急ぐ",
+    "answer1": "いそぐ",
+    "answer2": "Vội, gấp"
+  },
+  {
+    "question": "どのくらい／ぐらい",
+    "answer1": "どのくらい／ぐらい",
+    "answer2": "Khoảng bao lâu"
+  },
+  {
+    "question": "掛かる",
+    "answer1": "かかる",
+    "answer2": "Mất, tốn (thời gian, tiền)"
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "question": "少し",
+    "answer1": "すこし",
+    "answer2": "Một chút"
+  },
+  {
+    "question": "もう少し",
+    "answer1": "もうすこし",
+    "answer2": "Thêm một chút"
+  },
+  {
+    "question": "良く",
+    "answer1": "よく",
+    "answer2": "Rõ, giỏi"
+  },
+  {
+    "question": "大体",
+    "answer1": "だいたい",
+    "answer2": "Đại khái"
+  },
+  {
+    "question": "全然",
+    "answer1": "ぜんぜん",
+    "answer2": "Hoàn toàn không"
+  },
+  {
+    "question": "平仮名",
+    "answer1": "ひらがな",
+    "answer2": "Chữ Hiragana"
+  },
+  {
+    "question": "片仮名",
+    "answer1": "かたかな",
+    "answer2": "Chữ Katakana"
+  },
+  {
+    "question": "漢字",
+    "answer1": "かんじ",
+    "answer2": "Chữ Kanji"
+  },
+  {
+    "question": "ローマ字",
+    "answer1": "ローマじ",
+    "answer2": "Chữ La-tinh"
+  },
+  {
+    "question": "読む",
+    "answer1": "よむ",
+    "answer2": "Đọc"
+  },
+  {
+    "question": "本",
+    "answer1": "ほん",
+    "answer2": "Sách"
+  },
+  {
+    "question": "書く",
+    "answer1": "かく",
+    "answer2": "Viết"
+  },
+  {
+    "question": "聞く",
+    "answer1": "きく",
+    "answer2": "Nghe"
+  },
+  {
+    "question": "CD",
+    "answer1": "シーディー",
+    "answer2": "Đĩa CD"
+  },
+  {
+    "question": "調べる",
+    "answer1": "しらべる",
+    "answer2": "Tra cứu"
+  },
+  {
+    "question": "買う",
+    "answer1": "かう",
+    "answer2": "Mua"
+  },
+  {
+    "question": "辞書",
+    "answer1": "じしょ",
+    "answer2": "Từ điển"
+  },
+  {
+    "question": "電子辞書",
+    "answer1": "でんしじしょ",
+    "answer2": "Từ điển điện tử"
+  },
+  {
+    "question": "意味",
+    "answer1": "いみ",
+    "answer2": "Ý nghĩa"
+  },
+  {
+    "question": "頑張る",
+    "answer1": "がんばる",
+    "answer2": "Cố gắng"
+  },
+  {
+    "question": "宿題",
+    "answer1": "しゅくだい",
+    "answer2": "Bài tập về nhà"
+  },
+  {
+    "question": "日記",
+    "answer1": "にっき",
+    "answer2": "Nhật ký"
+  },
+  {
+    "question": "レポート",
+    "answer1": "レポート",
+    "answer2": "Báo cáo"
+  },
+  {
+    "question": "図書館",
+    "answer1": "としょかん",
+    "answer2": "Thư viện"
+  },
+  {
+    "question": "本屋",
+    "answer1": "ほんや",
+    "answer2": "Hiệu sách"
+  }
+]

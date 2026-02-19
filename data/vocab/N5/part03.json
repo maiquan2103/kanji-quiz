@@ -1,0 +1,127 @@
+[
+  {
+    "question": "お弟さん",
+    "answer1": "おとうとさん",
+    "answer2": "Em trai"
+  },
+  {
+    "question": "妹さん",
+    "answer1": "いもうとさん",
+    "answer2": "Em gái"
+  },
+  {
+    "question": "山田さん",
+    "answer1": "やまださん",
+    "answer2": "Anh/chị Yamada"
+  },
+  {
+    "question": "一人",
+    "answer1": "ひとり",
+    "answer2": "Một người"
+  },
+  {
+    "question": "二人",
+    "answer1": "ふたり",
+    "answer2": "Hai người"
+  },
+  {
+    "question": "三人",
+    "answer1": "さんにん",
+    "answer2": "Ba người"
+  },
+  {
+    "question": "四人",
+    "answer1": "よにん",
+    "answer2": "Bốn người"
+  },
+  {
+    "question": "五人",
+    "answer1": "ごにん",
+    "answer2": "Năm người"
+  },
+  {
+    "question": "六人",
+    "answer1": "ろくにん",
+    "answer2": "Sáu người"
+  },
+  {
+    "question": "七人／七人",
+    "answer1": "しちにん／ななにん",
+    "answer2": "Bảy người"
+  },
+  {
+    "question": "八人",
+    "answer1": "はちにん",
+    "answer2": "Tám người"
+  },
+  {
+    "question": "九人",
+    "answer1": "きゅうにん",
+    "answer2": "Chín người"
+  },
+  {
+    "question": "十人",
+    "answer1": "じゅうにん",
+    "answer2": "Mười người"
+  },
+  {
+    "question": "何人",
+    "answer1": "なんにん",
+    "answer2": "Bao nhiêu người"
+  },
+  {
+    "question": "大人",
+    "answer1": "おとな",
+    "answer2": "Người lớn"
+  },
+  {
+    "question": "子供",
+    "answer1": "こども",
+    "answer2": "Trẻ em"
+  },
+  {
+    "question": "男の人",
+    "answer1": "おとこのひと",
+    "answer2": "Người đàn ông"
+  },
+  {
+    "question": "女の人",
+    "answer1": "おんなのひと",
+    "answer2": "Người phụ nữ"
+  },
+  {
+    "question": "男の子",
+    "answer1": "おとこのこ",
+    "answer2": "Bé trai"
+  },
+  {
+    "question": "女の子",
+    "answer1": "おんなのこ",
+    "answer2": "Bé gái"
+  },
+  {
+    "question": "国",
+    "answer1": "くに",
+    "answer2": "Đất nước"
+  },
+  {
+    "question": "有る",
+    "answer1": "ある",
+    "answer2": "Có, tồn tại"
+  },
+  {
+    "question": "どちら",
+    "answer1": "どちら",
+    "answer2": "Ở đâu, hướng nào"
+  },
+  {
+    "question": "〜から来ました",
+    "answer1": "〜からきました",
+    "answer2": "Đến từ ~"
+  },
+  {
+    "question": "〜人",
+    "answer1": "〜じん",
+    "answer2": "Người (quốc tịch)"
+  }
+]
