@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Danh sách phần</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <a class="btn" href="index.html">← Về màn chính</a>
+      <h1 id="title" style="margin:0;"></h1>
+    </div>
+
+    <div class="row" style="gap:8px; flex-wrap:wrap;">
+      <button class="btn" id="resetLevelBtn">Reset trạng thái level</button>
+    </div>
+
+    <div id="parts" class="list"></div>
+  </div>
+
+  <script src="assets/storage.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    (async function(){
+      const level = App.getQuery("level");
+      if(!level) return location.href = "index.html";
+      document.getElementById("title").textContent = `Level ${level}`;
+
+      const config = await App.loadJSON("config/levels.json");
+      if(!config[level]) {
+        alert("Không tìm thấy config cho level này!");
+        return location.href = "index.html";
+      }
+
+      document.getElementById("resetLevelBtn").addEventListener("click", () => {
+        Storage.resetLevel(level);
+        renderParts(level, config[level]);
+      });
+
+      function renderParts(level, levelCfg){
+        const partsEl = document.getElementById("parts");
+        partsEl.innerHTML = "";
+
+        const doneMap = Storage.getDoneMap(level);
+
+        for(let i=1;i<=levelCfg.parts;i++){
+          const partNo = String(i).padStart(2,"0");
+          const isDone = !!doneMap[partNo];
+
+          const item = document.createElement("div");
+          item.className = "item";
+
+          const left = document.createElement("div");
+          left.innerHTML = `
+            <div class="item-title">Phần ${partNo}</div>
+            <div class="item-sub">${isDone ? "✅ Đã xong" : "⬜ Chưa xong"}</div>
+          `;
+
+          const right = document.createElement("div");
+          right.className = "row";
+
+          const playBtn = document.createElement("a");
+          playBtn.className = "btn primary";
+          playBtn.textContent = isDone ? "Chơi lại" : "Chơi";
+          playBtn.href = `play.html?level=${encodeURIComponent(level)}&part=${partNo}`;
+
+          const markBtn = document.createElement("button");
+          markBtn.className = "btn";
+          markBtn.textContent = isDone ? "Bỏ đánh dấu" : "Đánh dấu xong";
+          markBtn.addEventListener("click", () => {
+            Storage.setDone(level, partNo, !isDone);
+            renderParts(level, levelCfg);
+          });
+
+          right.appendChild(playBtn);
+          right.appendChild(markBtn);
+
+          item.appendChild(left);
+          item.appendChild(right);
+          partsEl.appendChild(item);
+        }
+      }
+
+      renderParts(level, config[level]);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "N5": { "parts": 40, "path": "data/N5" },
+  "N4": { "parts": 60, "path": "data/N4" },
+  "N3": { "parts": 80, "path": "data/N3" },
+  "N2": { "parts": 75, "path": "data/N2" },
+  "N1": { "parts": 90, "path": "data/N1" }
+}
