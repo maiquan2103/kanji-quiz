@@ -6,6 +6,11 @@ body { margin: 0; background: #0b0e14; color: #e7eaf0; }
 .view { margin-top: 16px; }
 
 .card { background: #121826; border: 1px solid #202a3c; border-radius: 14px; padding: 16px; }
+.cardHome { padding: 32px; }
+.cardHome .h1 { font-size: 48px; margin-bottom: 20px; }
+.cardHome .sub { font-size: 30px; margin-bottom: 28px; }
+.cardHome .grid { gap: 24px; }
+.cardHome .btn { padding: 28px 32px; font-size: 34px; font-weight: 700; text-align: center; }
 .grid { display: grid; gap: 12px; }
 .grid2 { grid-template-columns: 1fr;  }
 @media (max-width: 640px) { .grid2 { grid-template-columns: 1fr; } }
@@ -27,8 +32,8 @@ body { margin: 0; background: #0b0e14; color: #e7eaf0; }
 .badge { display: inline-block; padding: 2px 8px; border: 1px solid #2a3550; border-radius: 999px; font-size: 12px; opacity: .9; }
 .badge.done { border-color: #2d7a4d; color: #7df2b4; }
 
-.h1 { font-size: 20px; margin: 0 0 10px; }
-.sub { opacity: .85; margin: 0 0 12px; }
+.h1 { font-size: 26px; margin: 0 0 10px; }
+.sub { opacity: .85; margin: 0 0 12px; font-size: 16px; }
 
 .questionBox { display:flex; align-items:center; justify-content:space-between; gap: 12px; }
 .questionCenter {
@@ -44,12 +49,18 @@ body { margin: 0; background: #0b0e14; color: #e7eaf0; }
   margin: 16px 0 20px;
 }
 .questionCenter .questionChoices { margin-top: 8px; text-align: left; }
+.questionCenter .questionChoices .btn .choiceLine1 { font-size: 20px; }
+.questionCenter .questionChoices .btn .choiceLine2 { font-size: 16px; }
+.questionCenter .questionMeta .sub,
+.questionCenter .questionMeta .progress { font-size: 17px; }
 .questionCenter .feedback { text-align: left; }
+.questionCenter .feedback .choiceLine1 { font-size: 18px; }
+.questionCenter .feedback .choiceLine2 { font-size: 15px; }
 .bigQ { font-size: 44px; font-weight: 800; letter-spacing: 2px; }
 .progress { opacity: .85; }
 
-.choiceLine1 { font-weight: 700; }
-.choiceLine2 { opacity: .85; margin-top: 4px; }
+.choiceLine1 { font-weight: 700; font-size: 18px; }
+.choiceLine2 { opacity: .85; margin-top: 4px; font-size: 15px; }
 .feedback { margin-top: 12px; padding: 12px; border-radius: 12px; border: 1px solid #2a3550; background: #0f1422; }
 .feedback.ok { border-color: #2d7a4d; }
 .feedback.ng { border-color: #8a2f2f; }

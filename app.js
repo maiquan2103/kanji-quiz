@@ -57,7 +57,7 @@ function routeToHome() {
 
 function renderHome() {
   view.innerHTML = `
-    <div class="card">
+    <div class="card cardHome">
       <h1 class="h1">Bạn muốn học gì</h1>
       <p class="sub">Từ vựng hay Chữ Hán</p>
       <div class="grid grid2">
