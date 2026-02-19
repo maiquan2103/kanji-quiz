@@ -1,0 +1,127 @@
+[
+  {
+    "question": "どれ",
+    "answer1": "どれ",
+    "answer2": "Cái nào"
+  },
+  {
+    "question": "この",
+    "answer1": "この",
+    "answer2": "~ này"
+  },
+  {
+    "question": "その",
+    "answer1": "その",
+    "answer2": "~ đó"
+  },
+  {
+    "question": "あの",
+    "answer1": "あの",
+    "answer2": "~ kia"
+  },
+  {
+    "question": "どの",
+    "answer1": "どの",
+    "answer2": "~ nào"
+  },
+  {
+    "question": "何",
+    "answer1": "なん",
+    "answer2": "Cái gì"
+  },
+  {
+    "question": "名刺",
+    "answer1": "めいし",
+    "answer2": "Danh thiếp"
+  },
+  {
+    "question": "ケータイ",
+    "answer1": "ケータイ",
+    "answer2": "Điện thoại di động"
+  },
+  {
+    "question": "スマホ",
+    "answer1": "スマホ",
+    "answer2": "Điện thoại thông minh"
+  },
+  {
+    "question": "電池",
+    "answer1": "でんち",
+    "answer2": "Pin"
+  },
+  {
+    "question": "ノート",
+    "answer1": "ノート",
+    "answer2": "Quyển vở"
+  },
+  {
+    "question": "紙",
+    "answer1": "かみ",
+    "answer2": "Giấy"
+  },
+  {
+    "question": "手帳",
+    "answer1": "てちょう",
+    "answer2": "Sổ tay"
+  },
+  {
+    "question": "ボールペン",
+    "answer1": "ボールペン",
+    "answer2": "Bút bi"
+  },
+  {
+    "question": "シャープペンシル",
+    "answer1": "シャープペンシル",
+    "answer2": "Bút chì bấm"
+  },
+  {
+    "question": "鉛筆",
+    "answer1": "えんぴつ",
+    "answer2": "Bút chì"
+  },
+  {
+    "question": "消しゴム",
+    "answer1": "けしごむ",
+    "answer2": "Cục tẩy"
+  },
+  {
+    "question": "パンチ",
+    "answer1": "パンチ",
+    "answer2": "Đồ bấm lỗ"
+  },
+  {
+    "question": "ホッチキス",
+    "answer1": "ホッチキス",
+    "answer2": "Đồ bấm"
+  },
+  {
+    "question": "セロテープ",
+    "answer1": "セロテープ",
+    "answer2": "Băng keo"
+  },
+  {
+    "question": "鋏",
+    "answer1": "はさみ",
+    "answer2": "Cái kéo"
+  },
+  {
+    "question": "箱",
+    "answer1": "はこ",
+    "answer2": "Cái hộp"
+  },
+  {
+    "question": "コンピューター",
+    "answer1": "コンピューター",
+    "answer2": "Máy tính"
+  },
+  {
+    "question": "パソコン",
+    "answer1": "パソコン",
+    "answer2": "Máy tính cá nhân"
+  },
+  {
+    "question": "インターネット",
+    "answer1": "インターネット",
+    "answer2": "Internet"
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "question": "体",
+    "answer1": "からだ",
+    "answer2": "Cơ thể"
+  },
+  {
+    "question": "体に良い",
+    "answer1": "からだにいい",
+    "answer2": "Tốt cho cơ thể"
+  },
+  {
+    "question": "調子",
+    "answer1": "ちょうし",
+    "answer2": "Tình trạng"
+  },
+  {
+    "question": "疲れる",
+    "answer1": "つかれる",
+    "answer2": "Mệt mỏi"
+  },
+  {
+    "question": "眠い",
+    "answer1": "ねむい",
+    "answer2": "Buồn ngủ"
+  },
+  {
+    "question": "早く",
+    "answer1": "はやく",
+    "answer2": "Sớm, mau"
+  },
+  {
+    "question": "大変な",
+    "answer1": "たいへんな",
+    "answer2": "Vất vả"
+  },
+  {
+    "question": "最近",
+    "answer1": "さいきん",
+    "answer2": "Gần đây"
+  },
+  {
+    "question": "心配<する>",
+    "answer1": "しんぱいする",
+    "answer2": "Lo lắng"
+  },
+  {
+    "question": "たばこ",
+    "answer1": "たばこ",
+    "answer2": "Thuốc lá"
+  },
+  {
+    "question": "吸う",
+    "answer1": "すう",
+    "answer2": "Hút"
+  },
+  {
+    "question": "禁煙",
+    "answer1": "きんえん",
+    "answer2": "Cấm hút thuốc"
+  },
+  {
+    "question": "大丈夫な",
+    "answer1": "だいじょうぶな",
+    "answer2": "Ổn, không sao"
+  },
+  {
+    "question": "無理な",
+    "answer1": "むりな",
+    "answer2": "Quá sức"
+  },
+  {
+    "question": "ダイエット",
+    "answer1": "ダイエット",
+    "answer2": "Ăn kiêng"
+  },
+  {
+    "question": "思い出す",
+    "answer1": "おもいだす",
+    "answer2": "Nhớ ra"
+  },
+  {
+    "question": "寂しい",
+    "answer1": "さびしい",
+    "answer2": "Buồn"
+  },
+  {
+    "question": "[お]久しぶりです[ね]",
+    "answer1": "おひさしぶりです",
+    "answer2": "Lâu ngày không gặp"
+  },
+  {
+    "question": "あっ",
+    "answer1": "あっ",
+    "answer2": "À!"
+  },
+  {
+    "question": "[お]元気ですか",
+    "answer1": "おげんきですか",
+    "answer2": "Anh/chị khỏe không?"
+  },
+  {
+    "question": "おかげさまで",
+    "answer1": "おかげさまで",
+    "answer2": "Nhờ trời"
+  },
+  {
+    "question": "パスポート",
+    "answer1": "パスポート",
+    "answer2": "Hộ chiếu"
+  },
+  {
+    "question": "ビザ",
+    "answer1": "ビザ",
+    "answer2": "Thị thực"
+  },
+  {
+    "question": "大使館",
+    "answer1": "たいしかん",
+    "answer2": "Đại sứ quán"
+  },
+  {
+    "question": "大切な",
+    "answer1": "たいせつな",
+    "answer2": "Quan trọng"
+  }
+]

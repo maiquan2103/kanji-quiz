@@ -1,0 +1,127 @@
+[
+  {
+    "question": "蜜柑",
+    "answer1": "みかん",
+    "answer2": "Quýt"
+  },
+  {
+    "question": "パン",
+    "answer1": "パン",
+    "answer2": "Bánh mì"
+  },
+  {
+    "question": "お菓子",
+    "answer1": "おかし",
+    "answer2": "Bánh kẹo"
+  },
+  {
+    "question": "チョコレート",
+    "answer1": "チョコレート",
+    "answer2": "Sô-cô-la"
+  },
+  {
+    "question": "飲む",
+    "answer1": "のむ",
+    "answer2": "Uống"
+  },
+  {
+    "question": "飲み物",
+    "answer1": "のみもの",
+    "answer2": "Đồ uống"
+  },
+  {
+    "question": "水",
+    "answer1": "みず",
+    "answer2": "Nước"
+  },
+  {
+    "question": "お湯",
+    "answer1": "おゆ",
+    "answer2": "Nước nóng"
+  },
+  {
+    "question": "冷たい",
+    "answer1": "つめたい",
+    "answer2": "Lạnh"
+  },
+  {
+    "question": "〜が良い",
+    "answer1": "〜がいい",
+    "answer2": "Thích ~ / tốt ~"
+  },
+  {
+    "question": "入れる",
+    "answer1": "いれる",
+    "answer2": "Cho vào"
+  },
+  {
+    "question": "ミルク",
+    "answer1": "ミルク",
+    "answer2": "Sữa"
+  },
+  {
+    "question": "自動販売機",
+    "answer1": "じどうはんばいき",
+    "answer2": "Máy bán hàng tự động"
+  },
+  {
+    "question": "牛乳",
+    "answer1": "ぎゅうにゅう",
+    "answer2": "Sữa tươi"
+  },
+  {
+    "question": "ジュース",
+    "answer1": "ジュース",
+    "answer2": "Nước trái cây"
+  },
+  {
+    "question": "コーヒー",
+    "answer1": "コーヒー",
+    "answer2": "Cà phê"
+  },
+  {
+    "question": "紅茶",
+    "answer1": "こうちゃ",
+    "answer2": "Hồng trà"
+  },
+  {
+    "question": "お茶",
+    "answer1": "おちゃ",
+    "answer2": "Trà"
+  },
+  {
+    "question": "お酒",
+    "answer1": "おさけ",
+    "answer2": "Rượu sake"
+  },
+  {
+    "question": "ビール",
+    "answer1": "ビール",
+    "answer2": "Bia"
+  },
+  {
+    "question": "ワイン",
+    "answer1": "ワイン",
+    "answer2": "Rượu vang"
+  },
+  {
+    "question": "カップ",
+    "answer1": "カップ",
+    "answer2": "Tách"
+  },
+  {
+    "question": "コップ",
+    "answer1": "コップ",
+    "answer2": "Cốc"
+  },
+  {
+    "question": "料理",
+    "answer1": "りょうり",
+    "answer2": "Món ăn"
+  },
+  {
+    "question": "ご飯",
+    "answer1": "ごはん",
+    "answer2": "Cơm"
+  }
+]

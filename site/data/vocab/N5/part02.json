@@ -1,0 +1,127 @@
+[
+  {
+    "question": "初めまして",
+    "answer1": "はじめまして",
+    "answer2": "Rất vui được gặp (lần đầu)"
+  },
+  {
+    "question": "どうぞ宜しく",
+    "answer1": "どうぞよろしく",
+    "answer2": "Mong được giúp đỡ"
+  },
+  {
+    "question": "こちらこそ",
+    "answer1": "こちらこそ",
+    "answer2": "Tôi mới là người phải cảm ơn"
+  },
+  {
+    "question": "家族",
+    "answer1": "かぞく",
+    "answer2": "Gia đình"
+  },
+  {
+    "question": "私の家族",
+    "answer1": "わたしのかぞく",
+    "answer2": "Gia đình của tôi"
+  },
+  {
+    "question": "父",
+    "answer1": "ちち",
+    "answer2": "Bố (của tôi)"
+  },
+  {
+    "question": "両親",
+    "answer1": "りょうしん",
+    "answer2": "Cha mẹ"
+  },
+  {
+    "question": "母",
+    "answer1": "はは",
+    "answer2": "Mẹ (của tôi)"
+  },
+  {
+    "question": "姉",
+    "answer1": "あね",
+    "answer2": "Chị gái (của tôi)"
+  },
+  {
+    "question": "兄",
+    "answer1": "あに",
+    "answer2": "Anh trai (của tôi)"
+  },
+  {
+    "question": "弟",
+    "answer1": "おとうと",
+    "answer2": "Em trai (của tôi)"
+  },
+  {
+    "question": "妹",
+    "answer1": "いもうと",
+    "answer2": "Em gái (của tôi)"
+  },
+  {
+    "question": "兄弟",
+    "answer1": "きょうだい",
+    "answer2": "Anh chị em"
+  },
+  {
+    "question": "犬",
+    "answer1": "いぬ",
+    "answer2": "Chó"
+  },
+  {
+    "question": "猫",
+    "answer1": "ねこ",
+    "answer2": "Mèo"
+  },
+  {
+    "question": "居る",
+    "answer1": "いる",
+    "answer2": "Có, tồn tại (người/động vật)"
+  },
+  {
+    "question": "家",
+    "answer1": "うち",
+    "answer2": "Nhà"
+  },
+  {
+    "question": "山田さんの家族",
+    "answer1": "やまださんのかぞく",
+    "answer2": "Gia đình anh/chị Yamada"
+  },
+  {
+    "question": "お祖父さん",
+    "answer1": "おじいさん",
+    "answer2": "Ông"
+  },
+  {
+    "question": "お祖母さん",
+    "answer1": "おばあさん",
+    "answer2": "Bà"
+  },
+  {
+    "question": "ご両親",
+    "answer1": "ごりょうしん",
+    "answer2": "Cha mẹ (kính ngữ)"
+  },
+  {
+    "question": "お父さん",
+    "answer1": "おとうさん",
+    "answer2": "Bố"
+  },
+  {
+    "question": "お母さん",
+    "answer1": "おかあさん",
+    "answer2": "Mẹ"
+  },
+  {
+    "question": "お姉さん",
+    "answer1": "おねえさん",
+    "answer2": "Chị gái"
+  },
+  {
+    "question": "お兄さん",
+    "answer1": "おにいさん",
+    "answer2": "Anh trai"
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "question": "一昨日",
+    "answer1": "おととい",
+    "answer2": "Hôm kia"
+  },
+  {
+    "question": "明後日",
+    "answer1": "あさって",
+    "answer2": "Ngày mốt"
+  },
+  {
+    "question": "先週",
+    "answer1": "せんしゅう",
+    "answer2": "Tuần trước"
+  },
+  {
+    "question": "今週",
+    "answer1": "こんしゅう",
+    "answer2": "Tuần này"
+  },
+  {
+    "question": "来週",
+    "answer1": "らいしゅう",
+    "answer2": "Tuần tới"
+  },
+  {
+    "question": "先月",
+    "answer1": "せんげつ",
+    "answer2": "Tháng trước"
+  },
+  {
+    "question": "今月",
+    "answer1": "こんげつ",
+    "answer2": "Tháng này"
+  },
+  {
+    "question": "来月",
+    "answer1": "らいげつ",
+    "answer2": "Tháng tới"
+  },
+  {
+    "question": "電気",
+    "answer1": "でんき",
+    "answer2": "Điện, đèn"
+  },
+  {
+    "question": "付ける",
+    "answer1": "つける",
+    "answer2": "Bật"
+  },
+  {
+    "question": "消す",
+    "answer1": "けす",
+    "answer2": "Tắt"
+  },
+  {
+    "question": "明るい",
+    "answer1": "あかるい",
+    "answer2": "Sáng"
+  },
+  {
+    "question": "暗い",
+    "answer1": "くらい",
+    "answer2": "Tối"
+  },
+  {
+    "question": "エアコン",
+    "answer1": "エアコン",
+    "answer2": "Máy điều hòa"
+  },
+  {
+    "question": "ビデオ",
+    "answer1": "ビデオ",
+    "answer2": "Video"
+  },
+  {
+    "question": "スイッチ",
+    "answer1": "スイッチ",
+    "answer2": "Công tắc"
+  },
+  {
+    "question": "回す",
+    "answer1": "まわす",
+    "answer2": "Vặn, xoay"
+  },
+  {
+    "question": "引く",
+    "answer1": "ひく",
+    "answer2": "Kéo"
+  },
+  {
+    "question": "動く",
+    "answer1": "うごく",
+    "answer2": "Chuyển động"
+  },
+  {
+    "question": "音",
+    "answer1": "おと",
+    "answer2": "Âm thanh"
+  },
+  {
+    "question": "もし［〜たら］",
+    "answer1": "もし［〜たら］",
+    "answer2": "Nếu ~"
+  },
+  {
+    "question": "故障<する>",
+    "answer1": "こしょうする",
+    "answer2": "Hỏng"
+  },
+  {
+    "question": "修理<する>",
+    "answer1": "しゅうりする",
+    "answer2": "Sửa chữa"
+  },
+  {
+    "question": "呼ぶ",
+    "answer1": "よぶ",
+    "answer2": "Gọi"
+  },
+  {
+    "question": "直す",
+    "answer1": "なおす",
+    "answer2": "Sửa"
+  }
+]

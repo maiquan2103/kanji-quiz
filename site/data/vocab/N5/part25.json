@@ -1,0 +1,127 @@
+[
+  {
+    "question": "ゴルフ",
+    "answer1": "ゴルフ",
+    "answer2": "Golf"
+  },
+  {
+    "question": "天気",
+    "answer1": "てんき",
+    "answer2": "Thời tiết"
+  },
+  {
+    "question": "良い",
+    "answer1": "いい",
+    "answer2": "Tốt, đẹp"
+  },
+  {
+    "question": "悪い",
+    "answer1": "わるい",
+    "answer2": "Xấu"
+  },
+  {
+    "question": "いいお天気ですね",
+    "answer1": "いいおてんきですね",
+    "answer2": "Thời tiết đẹp nhỉ"
+  },
+  {
+    "question": "雨",
+    "answer1": "あめ",
+    "answer2": "Mưa"
+  },
+  {
+    "question": "雪",
+    "answer1": "ゆき",
+    "answer2": "Tuyết"
+  },
+  {
+    "question": "降る",
+    "answer1": "ふる",
+    "answer2": "Rơi (mưa, tuyết)"
+  },
+  {
+    "question": "暑い",
+    "answer1": "あつい",
+    "answer2": "Nóng"
+  },
+  {
+    "question": "涼しい",
+    "answer1": "すずしい",
+    "answer2": "Mát"
+  },
+  {
+    "question": "寒い",
+    "answer1": "さむい",
+    "answer2": "Lạnh"
+  },
+  {
+    "question": "暖かい",
+    "answer1": "あたたかい",
+    "answer2": "Ấm"
+  },
+  {
+    "question": "多い",
+    "answer1": "おおい",
+    "answer2": "Nhiều"
+  },
+  {
+    "question": "少ない",
+    "answer1": "すくない",
+    "answer2": "Ít"
+  },
+  {
+    "question": "思う",
+    "answer1": "おもう",
+    "answer2": "Nghĩ"
+  },
+  {
+    "question": "多分",
+    "answer1": "たぶん",
+    "answer2": "Có lẽ"
+  },
+  {
+    "question": "きっと",
+    "answer1": "きっと",
+    "answer2": "Chắc chắn"
+  },
+  {
+    "question": "傘",
+    "answer1": "かさ",
+    "answer2": "Ô, dù"
+  },
+  {
+    "question": "持って来る",
+    "answer1": "もってくる",
+    "answer2": "Mang đến"
+  },
+  {
+    "question": "持って行く",
+    "answer1": "もっていく",
+    "answer2": "Mang đi"
+  },
+  {
+    "question": "番組",
+    "answer1": "ばんぐみ",
+    "answer2": "Chương trình"
+  },
+  {
+    "question": "何時",
+    "answer1": "いつ",
+    "answer2": "Khi nào"
+  },
+  {
+    "question": "去年",
+    "answer1": "きょねん",
+    "answer2": "Năm ngoái"
+  },
+  {
+    "question": "今年",
+    "answer1": "ことし",
+    "answer2": "Năm nay"
+  },
+  {
+    "question": "来年",
+    "answer1": "らいねん",
+    "answer2": "Năm sau"
+  }
+]

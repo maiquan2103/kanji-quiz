@@ -1,0 +1,127 @@
+[
+  {
+    "question": "アニメ",
+    "answer1": "アニメ",
+    "answer2": "Phim hoạt hình"
+  },
+  {
+    "question": "ゲーム",
+    "answer1": "ゲーム",
+    "answer2": "Trò chơi"
+  },
+  {
+    "question": "ソフト",
+    "answer1": "ソフト",
+    "answer2": "Phần mềm"
+  },
+  {
+    "question": "面白い",
+    "answer1": "おもしろい",
+    "answer2": "Thú vị"
+  },
+  {
+    "question": "ジョギング",
+    "answer1": "ジョギング",
+    "answer2": "Chạy bộ"
+  },
+  {
+    "question": "スキー",
+    "answer1": "スキー",
+    "answer2": "Trượt tuyết"
+  },
+  {
+    "question": "ダンス",
+    "answer1": "ダンス",
+    "answer2": "Khiêu vũ"
+  },
+  {
+    "question": "泳ぐ",
+    "answer1": "およぐ",
+    "answer2": "Bơi"
+  },
+  {
+    "question": "海",
+    "answer1": "うみ",
+    "answer2": "Biển"
+  },
+  {
+    "question": "プール",
+    "answer1": "プール",
+    "answer2": "Hồ bơi"
+  },
+  {
+    "question": "川",
+    "answer1": "かわ",
+    "answer2": "Sông"
+  },
+  {
+    "question": "釣り",
+    "answer1": "つり",
+    "answer2": "Câu cá"
+  },
+  {
+    "question": "登る",
+    "answer1": "のぼる",
+    "answer2": "Leo (núi)"
+  },
+  {
+    "question": "山",
+    "answer1": "やま",
+    "answer2": "Núi"
+  },
+  {
+    "question": "試合",
+    "answer1": "しあい",
+    "answer2": "Trận đấu"
+  },
+  {
+    "question": "勝つ",
+    "answer1": "かつ",
+    "answer2": "Thắng"
+  },
+  {
+    "question": "負ける",
+    "answer1": "まける",
+    "answer2": "Thua"
+  },
+  {
+    "question": "さあ",
+    "answer1": "さあ",
+    "answer2": "Chà…"
+  },
+  {
+    "question": "強い",
+    "answer1": "つよい",
+    "answer2": "Mạnh"
+  },
+  {
+    "question": "弱い",
+    "answer1": "よわい",
+    "answer2": "Yếu"
+  },
+  {
+    "question": "サッカー",
+    "answer1": "サッカー",
+    "answer2": "Bóng đá"
+  },
+  {
+    "question": "野球",
+    "answer1": "やきゅう",
+    "answer2": "Bóng chày"
+  },
+  {
+    "question": "相撲",
+    "answer1": "すもう",
+    "answer2": "Sumo"
+  },
+  {
+    "question": "柔道",
+    "answer1": "じゅうどう",
+    "answer2": "Judo"
+  },
+  {
+    "question": "テニス",
+    "answer1": "テニス",
+    "answer2": "Quần vợt"
+  }
+]

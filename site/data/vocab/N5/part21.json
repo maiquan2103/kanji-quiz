@@ -1,0 +1,127 @@
+[
+  {
+    "question": "入る",
+    "answer1": "はいる",
+    "answer2": "Vào"
+  },
+  {
+    "question": "レストラン",
+    "answer1": "レストラン",
+    "answer2": "Nhà hàng"
+  },
+  {
+    "question": "食堂",
+    "answer1": "しょくどう",
+    "answer2": "Quán ăn"
+  },
+  {
+    "question": "定食",
+    "answer1": "ていしょく",
+    "answer2": "Cơm phần"
+  },
+  {
+    "question": "喫茶店",
+    "answer1": "きっさてん",
+    "answer2": "Quán nước"
+  },
+  {
+    "question": "〜で",
+    "answer1": "〜で",
+    "answer2": "Bằng"
+  },
+  {
+    "question": "箸",
+    "answer1": "はし",
+    "answer2": "Đũa"
+  },
+  {
+    "question": "スプーン",
+    "answer1": "スプーン",
+    "answer2": "Muỗng"
+  },
+  {
+    "question": "フォーク",
+    "answer1": "フォーク",
+    "answer2": "Nĩa"
+  },
+  {
+    "question": "ナイフ",
+    "answer1": "ナイフ",
+    "answer2": "Dao"
+  },
+  {
+    "question": "皿",
+    "answer1": "さら",
+    "answer2": "Đĩa"
+  },
+  {
+    "question": "茶碗",
+    "answer1": "ちゃわん",
+    "answer2": "Chén"
+  },
+  {
+    "question": "いらっしゃいませ",
+    "answer1": "いらっしゃいませ",
+    "answer2": "Kính chào quý khách"
+  },
+  {
+    "question": "他に",
+    "answer1": "ほかに",
+    "answer2": "Ngoài ra"
+  },
+  {
+    "question": "別々に",
+    "answer1": "べつべつに",
+    "answer2": "Riêng lẻ"
+  },
+  {
+    "question": "これでお願いします",
+    "answer1": "これでおねがいします",
+    "answer2": "Lấy cái này"
+  },
+  {
+    "question": "サンドイッチをお願いします",
+    "answer1": "サンドイッチをおねがいします",
+    "answer2": "Cho tôi sandwich"
+  },
+  {
+    "question": "如何",
+    "answer1": "どう",
+    "answer2": "Thế nào"
+  },
+  {
+    "question": "甘い",
+    "answer1": "あまい",
+    "answer2": "Ngọt"
+  },
+  {
+    "question": "辛い",
+    "answer1": "からい",
+    "answer2": "Cay"
+  },
+  {
+    "question": "美味しい",
+    "answer1": "おいしい",
+    "answer2": "Ngon"
+  },
+  {
+    "question": "全部",
+    "answer1": "ぜんぶ",
+    "answer2": "Toàn bộ"
+  },
+  {
+    "question": "自分で",
+    "answer1": "じぶんで",
+    "answer2": "Tự mình"
+  },
+  {
+    "question": "お腹が空く",
+    "answer1": "おなかがすく",
+    "answer2": "Đói bụng"
+  },
+  {
+    "question": "喉が渇く",
+    "answer1": "のどがかわく",
+    "answer2": "Khát nước"
+  }
+]
