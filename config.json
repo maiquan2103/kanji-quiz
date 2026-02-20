@@ -4,6 +4,10 @@
     "N4": ["part01.json"]
   },
   "kanji": {
-    "N5": ["part01.json","part02.json"]
+    "N5": ["part01.json","part02.json","part03.json","part04.json"],
+    "N4": ["part01.json","part02.json","part03.json","part04.json","part05.json","part06.json","part07.json","part08.json","part09.json"],
+    "N3": ["part01.json","part02.json","part03.json","part04.json","part05.json","part06.json","part07.json","part08.json","part09.json","part10.json","part11.json","part12.json","part13.json","part14.json","part15.json","part16.json"],
+    "N2": ["part01.json","part02.json","part03.json","part04.json","part05.json","part06.json","part07.json","part08.json","part09.json","part10.json","part11.json","part12.json","part13.json","part14.json","part15.json","part16.json","part17.json"],
+    "N1": ["part01.json","part02.json","part03.json","part04.json","part05.json","part06.json","part07.json","part08.json","part09.json","part10.json","part11.json","part12.json","part13.json","part14.json","part15.json","part16.json","part17.json","part18.json","part19.json","part20.json","part21.json","part22.json","part23.json","part24.json","part25.json","part26.json","part27.json","part28.json","part29.json","part30.json","part31.json","part32.json","part33.json","part34.json","part35.json","part36.json","part37.json","part38.json","part39.json","part40.json","part41.json","part42.json","part43.json","part44.json","part45.json","part46.json","part47.json","part48.json"]
   }
 }

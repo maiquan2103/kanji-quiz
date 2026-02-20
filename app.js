@@ -325,7 +325,7 @@ function renderQuestion(feedback = null) {
           <div class="progress">Câu ${state.idx + 1} / ${total}</div>
         </div>
         <div class="bigQ">${escapeHtml(item.question)}</div>
-        ${feedback ? `<div class="answer1Reveal">${escapeHtml(item.answer1)}</div>` : ""}
+        ${feedback && state.mode !== "kanji" ? `<div class="answer1Reveal">${escapeHtml(item.answer1)}</div>` : ""}
         <div class="grid questionChoices" id="choices"></div>
         ${feedback ? `
           <div class="feedback ${feedback.ok ? "ok" : "ng"}">
@@ -359,7 +359,11 @@ function renderQuestion(feedback = null) {
       if (!feedback.ok && idx === feedback.correctIndex) cls += " choiceCorrect";
     }
     btn.className = cls;
-    btn.innerHTML = `<div class="choiceLine2">${escapeHtml(c.answer2 ?? "")}</div>`;
+    if (state.mode === "kanji") {
+      btn.innerHTML = `<div class="choiceLine1">${escapeHtml(c.answer1 ?? "")}</div><div class="choiceLine2">${escapeHtml(c.answer2 ?? "")}</div>`;
+    } else {
+      btn.innerHTML = `<div class="choiceLine2">${escapeHtml(c.answer2 ?? "")}</div>`;
+    }
     btn.onclick = () => onAnswer(idx === correctIndex, item, idx, correctIndex);
     box.appendChild(btn);
   });
@@ -384,7 +388,7 @@ function onAnswer(isCorrect, correctItem, chosenIndex, correctIndex) {
       } else {
         renderQuestion();
       }
-    }, 1500);
+    }, state.mode === "kanji" ? 1000 : 1500);
   } else {
     // Sai: giữ câu hỏi, hiển thị đáp án đúng bên dưới
     renderQuestion({ ok: false, chosenIndex, correctIndex });
