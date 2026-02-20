@@ -2,15 +2,30 @@
 body { margin: 0; background: #0b0e14; color: #e7eaf0; }
 .app { max-width: 860px; margin: 0 auto; padding: 16px; }
 .topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.topbarRight { display: flex; align-items: center; gap: 10px; }
+.userInfo { font-size: 14px; opacity: .9; margin-right: 4px; }
 .brand { font-weight: 700; font-size: 18px; }
 .view { margin-top: 16px; }
 
 .card { background: #121826; border: 1px solid #202a3c; border-radius: 14px; padding: 16px; }
+.cardTitleRow { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.cardTitleRow .h1 { margin: 0; flex: 0 1 auto; }
+.cardTitleRow .btnSmall { flex-shrink: 0; }
 .cardHome { padding: 32px; }
-.cardHome .h1 { font-size: 48px; margin-bottom: 20px; }
-.cardHome .sub { font-size: 30px; margin-bottom: 28px; }
+.cardHome .h1 { font-size: 32px; margin-bottom: 20px; }
 .cardHome .grid { gap: 24px; }
 .cardHome .btn { padding: 28px 32px; font-size: 34px; font-weight: 700; text-align: center; }
+.cardLogin .loginForm { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.cardLogin .loginInput {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #2a3550;
+  background: #172038;
+  color: #e7eaf0;
+  font-size: 18px;
+}
+.cardLogin .loginInput::placeholder { opacity: .6; }
+.cardLogin .loginForm .btn { font-size: 18px; padding: 14px; }
 .grid { display: grid; gap: 12px; }
 .grid2 { grid-template-columns: 1fr;  }
 @media (max-width: 640px) { .grid2 { grid-template-columns: 1fr; } }
@@ -47,6 +62,12 @@ body { margin: 0; background: #0b0e14; color: #e7eaf0; }
   font-weight: 800;
   letter-spacing: 2px;
   margin: 16px 0 20px;
+}
+.questionCenter .answer1Reveal {
+  font-size: 22px;
+  opacity: .9;
+  margin: -8px 0 16px;
+  color: #b8c5d6;
 }
 .questionCenter .questionChoices { margin-top: 8px; text-align: left; }
 .questionCenter .questionChoices .btn .choiceLine1 { font-size: 20px; }

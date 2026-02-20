@@ -12,8 +12,11 @@ function shuffle(arr) {
   return a;
 }
 
-function keyDone(mode, level, partFile) {
-  return `done:${mode}:${level}:${partFile}`;
+const STORAGE_KEY_ACCOUNT = "kanji-quiz:currentAccount";
+const DONE_CONFIG_PATH = "done-config.json";
+
+function keyDone(accountId, mode, level, partFile) {
+  return `done:${accountId}:${mode}:${level}:${partFile}`;
 }
 
 function partFileToLabel(partFile) {
@@ -22,11 +25,13 @@ function partFileToLabel(partFile) {
   return n ? `Phần ${n}` : partFile || "";
 }
 
-function setDone(mode, level, partFile, done=true) {
-  localStorage.setItem(keyDone(mode, level, partFile), done ? "1" : "0");
+function setDone(mode, level, partFile, done) {
+  if (!state.accountId) return;
+  localStorage.setItem(keyDone(state.accountId, mode, level, partFile), done ? "1" : "0");
 }
 function isDone(mode, level, partFile) {
-  return localStorage.getItem(keyDone(mode, level, partFile)) === "1";
+  if (!state.accountId) return false;
+  return localStorage.getItem(keyDone(state.accountId, mode, level, partFile)) === "1";
 }
 
 async function loadJSON(path) {
@@ -35,21 +40,98 @@ async function loadJSON(path) {
   return await res.json();
 }
 
+async function loadDoneConfig() {
+  try {
+    const res = await fetch(DONE_CONFIG_PATH, { cache: "no-store" });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (!data || !data.accounts) return;
+    for (const accountId of Object.keys(data.accounts)) {
+      const acc = data.accounts[accountId];
+      if (!acc || typeof acc !== "object") continue;
+      for (const mode of Object.keys(acc)) {
+        const levels = acc[mode];
+        if (!levels || typeof levels !== "object") continue;
+        for (const level of Object.keys(levels)) {
+          const parts = levels[level];
+          if (!Array.isArray(parts)) continue;
+          for (const partFile of parts) {
+            localStorage.setItem(keyDone(accountId, mode, level, partFile), "1");
+          }
+        }
+      }
+    }
+  } catch (_) {}
+}
+
 // ===== App State =====
 const state = {
   config: null,
+  accountId: null,
   mode: null,   // "vocab" | "kanji"
   level: null,  // "N5".."N1"
   partFile: null,
   questions: [],
   order: [],
   idx: 0,
-  locked: false
+  locked: false,
+  currentChoices: null,
+  currentCorrectIndex: null
 };
 
 btnHome.addEventListener("click", () => routeToHome());
+$("#btnLogout")?.addEventListener("click", logout);
+
+function getAccountInput() {
+  const el = document.getElementById("loginInput");
+  return el ? el.value.trim() : "";
+}
+
+function logout() {
+  state.accountId = null;
+  localStorage.removeItem(STORAGE_KEY_ACCOUNT);
+  updateTopbar(false);
+  renderLogin();
+}
+
+function updateTopbar(loggedIn) {
+  const btnHome = $("#btnHome");
+  const btnLogout = $("#btnLogout");
+  const userInfo = $("#userInfo");
+  if (btnLogout) btnLogout.style.display = loggedIn ? "" : "none";
+  if (btnHome) btnHome.style.display = loggedIn ? "" : "none";
+  if (userInfo) {
+    userInfo.textContent = loggedIn ? state.accountId : "";
+    userInfo.style.display = loggedIn ? "" : "none";
+  }
+}
 
 // ===== Views =====
+function renderLogin() {
+  view.innerHTML = `
+    <div class="card cardHome cardLogin">
+      <h1 class="h1">Đăng nhập</h1>
+      <p class="sub">Nhập tên tài khoản (không cần mật khẩu)</p>
+      <form id="loginForm" class="loginForm">
+        <input type="text" id="loginInput" class="loginInput" placeholder="Tên tài khoản" autocomplete="username" />
+        <button type="submit" class="btn" id="loginBtn">Đăng nhập</button>
+      </form>
+    </div>
+  `;
+  const form = $("#loginForm");
+  const input = $("#loginInput");
+  form.onsubmit = (e) => {
+    e.preventDefault();
+    const id = input.value.trim();
+    if (!id) return;
+    state.accountId = id;
+    localStorage.setItem(STORAGE_KEY_ACCOUNT, id);
+    updateTopbar(true);
+    renderHome();
+  };
+  if (input) input.focus();
+}
+
 function routeToHome() {
   state.mode = null; state.level = null; state.partFile = null;
   renderHome();
@@ -59,7 +141,6 @@ function renderHome() {
   view.innerHTML = `
     <div class="card cardHome">
       <h1 class="h1">Bạn muốn học gì</h1>
-      <p class="sub">Từ vựng hay Chữ Hán</p>
       <div class="grid grid2">
         <button class="btn" id="goVocab">Từ vựng</button>
         <button class="btn" id="goKanji">Chữ Hán</button>
@@ -126,16 +207,20 @@ function renderParts(mode, level) {
 
   view.innerHTML = `
     <div class="card">
-      <h1 class="h1">${mode === "vocab" ? "Từ vựng" : "Chữ Hán"} — ${level}</h1>
+      <div class="cardTitleRow">
+        <h1 class="h1">${mode === "vocab" ? "Từ vựng" : "Chữ Hán"} — ${level}</h1>
+        <button class="btnSmall" id="backLevels">← Cấp</button>
+      </div>
       <p class="sub">Chọn phần chơi</p>
       <div class="grid" id="parts"></div>
       <div class="row">
-        <button class="btnSmall" id="backLevels">← Cấp</button>
+        <button class="btnSmall" id="backLevels2">← Cấp</button>
         <button class="btnSmall" id="backHome">Home</button>
       </div>
     </div>
   `;
   $("#backLevels").onclick = () => renderLevels(mode);
+  $("#backLevels2").onclick = () => renderLevels(mode);
   $("#backHome").onclick = () => renderHome();
 
   const box = $("#parts");
@@ -209,7 +294,17 @@ function renderQuestion(feedback = null) {
   const qIndex = state.order[state.idx];
   const item = state.questions[qIndex];
 
-  const { choices, correctIndex } = buildChoices(item, state.questions);
+  let choices, correctIndex;
+  if (!feedback) {
+    const built = buildChoices(item, state.questions);
+    choices = built.choices;
+    correctIndex = built.correctIndex;
+    state.currentChoices = choices;
+    state.currentCorrectIndex = correctIndex;
+  } else {
+    choices = state.currentChoices;
+    correctIndex = state.currentCorrectIndex;
+  }
 
   const partLabel = partFileToLabel(state.partFile);
   view.innerHTML = `
@@ -220,13 +315,11 @@ function renderQuestion(feedback = null) {
           <div class="progress">Câu ${state.idx + 1} / ${total}</div>
         </div>
         <div class="bigQ">${escapeHtml(item.question)}</div>
+        ${feedback ? `<div class="answer1Reveal">${escapeHtml(item.answer1)}</div>` : ""}
         <div class="grid questionChoices" id="choices"></div>
         ${feedback ? `
           <div class="feedback ${feedback.ok ? "ok" : "ng"}">
-            <div class="choiceLine1">${feedback.ok ? "✅ Đúng" : "❌ Sai"}</div>
-            <div class="choiceLine2">Đáp án đúng:</div>
-            <div class="choiceLine1">${escapeHtml(item.answer1)}</div>
-            <div class="choiceLine2">${escapeHtml(item.answer2 ?? "")}</div>
+            <div class="choiceLine1">${feedback.ok ? "Tuyệt vời!" : "Cố lên, lại lần nữa nào!"}</div>
           </div>
         ` : ""}
       </div>
@@ -256,10 +349,7 @@ function renderQuestion(feedback = null) {
       if (!feedback.ok && idx === feedback.correctIndex) cls += " choiceCorrect";
     }
     btn.className = cls;
-    btn.innerHTML = `
-      <div class="choiceLine1">${escapeHtml(c.answer1)}</div>
-      <div class="choiceLine2">${escapeHtml(c.answer2 ?? "")}</div>
-    `;
+    btn.innerHTML = `<div class="choiceLine2">${escapeHtml(c.answer2 ?? "")}</div>`;
     btn.onclick = () => onAnswer(idx === correctIndex, item, idx, correctIndex);
     box.appendChild(btn);
   });
@@ -284,7 +374,7 @@ function onAnswer(isCorrect, correctItem, chosenIndex, correctIndex) {
       } else {
         renderQuestion();
       }
-    }, 650);
+    }, 1500);
   } else {
     // Sai: giữ câu hỏi, hiển thị đáp án đúng bên dưới
     renderQuestion({ ok: false, chosenIndex, correctIndex });
@@ -320,5 +410,13 @@ function escapeHtml(s) {
 // ===== Boot =====
 (async function boot() {
   state.config = await loadJSON("config.json");
-  renderHome();
+  await loadDoneConfig();
+  state.accountId = localStorage.getItem(STORAGE_KEY_ACCOUNT);
+  if (state.accountId) {
+    updateTopbar(true);
+    renderHome();
+  } else {
+    updateTopbar(false);
+    renderLogin();
+  }
 })();
