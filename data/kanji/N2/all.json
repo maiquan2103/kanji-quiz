@@ -1,0 +1,2067 @@
+[
+  {
+    "question": "圧",
+    "answer1": "Áp",
+    "answer2": "áp lực"
+  },
+  {
+    "question": "囲",
+    "answer1": "Vi",
+    "answer2": "bao quanh"
+  },
+  {
+    "question": "移",
+    "answer1": "Di",
+    "answer2": "di chuyển"
+  },
+  {
+    "question": "因",
+    "answer1": "Nhân",
+    "answer2": "nguyên nhân"
+  },
+  {
+    "question": "永",
+    "answer1": "Vĩnh",
+    "answer2": "vĩnh viễn"
+  },
+  {
+    "question": "営",
+    "answer1": "Doanh",
+    "answer2": "kinh doanh"
+  },
+  {
+    "question": "衛",
+    "answer1": "Vệ",
+    "answer2": "bảo vệ"
+  },
+  {
+    "question": "易",
+    "answer1": "Dịch",
+    "answer2": "dễ, trao đổi"
+  },
+  {
+    "question": "益",
+    "answer1": "Ích",
+    "answer2": "lợi ích"
+  },
+  {
+    "question": "液",
+    "answer1": "Dịch",
+    "answer2": "chất lỏng"
+  },
+  {
+    "question": "演",
+    "answer1": "Diễn",
+    "answer2": "diễn xuất"
+  },
+  {
+    "question": "応",
+    "answer1": "Ứng",
+    "answer2": "ứng đối"
+  },
+  {
+    "question": "往",
+    "answer1": "Vãng",
+    "answer2": "đi lại"
+  },
+  {
+    "question": "桜",
+    "answer1": "Anh",
+    "answer2": "hoa anh đào"
+  },
+  {
+    "question": "恩",
+    "answer1": "Ân",
+    "answer2": "ân huệ"
+  },
+  {
+    "question": "可",
+    "answer1": "Khả",
+    "answer2": "có thể"
+  },
+  {
+    "question": "仮",
+    "answer1": "Giả",
+    "answer2": "tạm thời"
+  },
+  {
+    "question": "価",
+    "answer1": "Giá",
+    "answer2": "giá cả"
+  },
+  {
+    "question": "河",
+    "answer1": "Hà",
+    "answer2": "sông"
+  },
+  {
+    "question": "過",
+    "answer1": "Quá",
+    "answer2": "vượt quá"
+  },
+  {
+    "question": "賀",
+    "answer1": "Hạ",
+    "answer2": "chúc mừng"
+  },
+  {
+    "question": "解",
+    "answer1": "Giải",
+    "answer2": "giải quyết"
+  },
+  {
+    "question": "格",
+    "answer1": "Cách",
+    "answer2": "tư cách, tiêu chuẩn"
+  },
+  {
+    "question": "確",
+    "answer1": "Xác",
+    "answer2": "chính xác"
+  },
+  {
+    "question": "額",
+    "answer1": "Ngạch",
+    "answer2": "hạn mức, trán"
+  },
+  {
+    "question": "刊",
+    "answer1": "Khan",
+    "answer2": "xuất bản"
+  },
+  {
+    "question": "幹",
+    "answer1": "Cán",
+    "answer2": "trung tâm, thân cây"
+  },
+  {
+    "question": "慣",
+    "answer1": "Quán",
+    "answer2": "quen thuộc"
+  },
+  {
+    "question": "眼",
+    "answer1": "Nhãn",
+    "answer2": "con mắt"
+  },
+  {
+    "question": "基",
+    "answer1": "Cơ",
+    "answer2": "cơ sở"
+  },
+  {
+    "question": "寄",
+    "answer1": "Kí",
+    "answer2": "gửi, ghé vào"
+  },
+  {
+    "question": "規",
+    "answer1": "Quy",
+    "answer2": "quy tắc"
+  },
+  {
+    "question": "技",
+    "answer1": "Kỹ",
+    "answer2": "kỹ thuật"
+  },
+  {
+    "question": "義",
+    "answer1": "Nghĩa",
+    "answer2": "ý nghĩa, chính nghĩa"
+  },
+  {
+    "question": "逆",
+    "answer1": "Nghịch",
+    "answer2": "ngược lại"
+  },
+  {
+    "question": "久",
+    "answer1": "Cửu",
+    "answer2": "lâu dài"
+  },
+  {
+    "question": "旧",
+    "answer1": "Cựu",
+    "answer2": "cũ"
+  },
+  {
+    "question": "居",
+    "answer1": "Cư",
+    "answer2": "cư trú"
+  },
+  {
+    "question": "許",
+    "answer1": "Hứa",
+    "answer2": "cho phép"
+  },
+  {
+    "question": "境",
+    "answer1": "Cảnh",
+    "answer2": "biên giới"
+  },
+  {
+    "question": "均",
+    "answer1": "Quân",
+    "answer2": "đều, cân bằng"
+  },
+  {
+    "question": "禁",
+    "answer1": "Cấm",
+    "answer2": "cấm đoán"
+  },
+  {
+    "question": "句",
+    "answer1": "Cú",
+    "answer2": "câu, đoạn"
+  },
+  {
+    "question": "群",
+    "answer1": "Quần",
+    "answer2": "quần thể"
+  },
+  {
+    "question": "経",
+    "answer1": "Kinh",
+    "answer2": "kinh nghiệm, kinh tế"
+  },
+  {
+    "question": "潔",
+    "answer1": "Khiết",
+    "answer2": "sạch"
+  },
+  {
+    "question": "件",
+    "answer1": "Kiện",
+    "answer2": "vụ việc"
+  },
+  {
+    "question": "券",
+    "answer1": "Khoán",
+    "answer2": "vé, phiếu"
+  },
+  {
+    "question": "検",
+    "answer1": "Kiểm",
+    "answer2": "kiểm tra"
+  },
+  {
+    "question": "限",
+    "answer1": "Hạn",
+    "answer2": "giới hạn"
+  },
+  {
+    "question": "現",
+    "answer1": "Hiện",
+    "answer2": "hiện tại"
+  },
+  {
+    "question": "減",
+    "answer1": "Giảm",
+    "answer2": "giảm xuống"
+  },
+  {
+    "question": "故",
+    "answer1": "Cố",
+    "answer2": "nguyên nhân"
+  },
+  {
+    "question": "個",
+    "answer1": "Cá",
+    "answer2": "cá nhân"
+  },
+  {
+    "question": "護",
+    "answer1": "Hộ",
+    "answer2": "bảo vệ"
+  },
+  {
+    "question": "効",
+    "answer1": "Hiệu",
+    "answer2": "hiệu quả"
+  },
+  {
+    "question": "厚",
+    "answer1": "Hậu",
+    "answer2": "dày"
+  },
+  {
+    "question": "耕",
+    "answer1": "Canh",
+    "answer2": "canh tác"
+  },
+  {
+    "question": "構",
+    "answer1": "Cấu",
+    "answer2": "cấu trúc"
+  },
+  {
+    "question": "興",
+    "answer1": "Hưng",
+    "answer2": "phát triển"
+  },
+  {
+    "question": "講",
+    "answer1": "Giảng",
+    "answer2": "giảng dạy"
+  },
+  {
+    "question": "混",
+    "answer1": "Hỗn",
+    "answer2": "trộn, lẫn"
+  },
+  {
+    "question": "査",
+    "answer1": "Tra",
+    "answer2": "điều tra"
+  },
+  {
+    "question": "再",
+    "answer1": "Tái",
+    "answer2": "lại nữa"
+  },
+  {
+    "question": "妻",
+    "answer1": "Thê",
+    "answer2": "vợ"
+  },
+  {
+    "question": "罪",
+    "answer1": "Tội",
+    "answer2": "tội lỗi"
+  },
+  {
+    "question": "財",
+    "answer1": "Tài",
+    "answer2": "tiền tài"
+  },
+  {
+    "question": "桜",
+    "answer1": "Anh",
+    "answer2": "anh đào"
+  },
+  {
+    "question": "昨",
+    "answer1": "Tạc",
+    "answer2": "hôm qua"
+  },
+  {
+    "question": "札",
+    "answer1": "Trát",
+    "answer2": "tấm thẻ"
+  },
+  {
+    "question": "刷",
+    "answer1": "Loát",
+    "answer2": "in"
+  },
+  {
+    "question": "察",
+    "answer1": "Sát",
+    "answer2": "quan sát"
+  },
+  {
+    "question": "参",
+    "answer1": "Tham",
+    "answer2": "tham gia"
+  },
+  {
+    "question": "産",
+    "answer1": "Sản",
+    "answer2": "sản xuất"
+  },
+  {
+    "question": "散",
+    "answer1": "Tán",
+    "answer2": "tản mác"
+  },
+  {
+    "question": "残",
+    "answer1": "Tàn",
+    "answer2": "còn lại"
+  },
+  {
+    "question": "司",
+    "answer1": "Ti",
+    "answer2": "quản lý"
+  },
+  {
+    "question": "試",
+    "answer1": "Thí",
+    "answer2": "thử nghiệm"
+  },
+  {
+    "question": "詞",
+    "answer1": "Từ",
+    "answer2": "từ vựng"
+  },
+  {
+    "question": "誌",
+    "answer1": "Chí",
+    "answer2": "tạp chí"
+  },
+  {
+    "question": "賛",
+    "answer1": "Tán",
+    "answer2": "tán đồng"
+  },
+  {
+    "question": "支",
+    "answer1": "Chi",
+    "answer2": "chi nhánh"
+  },
+  {
+    "question": "志",
+    "answer1": "Chí",
+    "answer2": "ý chí"
+  },
+  {
+    "question": "枝",
+    "answer1": "Chi",
+    "answer2": "cành cây"
+  },
+  {
+    "question": "師",
+    "answer1": "Sư",
+    "answer2": "thầy, sư"
+  },
+  {
+    "question": "資",
+    "answer1": "Tư",
+    "answer2": "tài sản"
+  },
+  {
+    "question": "飼",
+    "answer1": "Tự",
+    "answer2": "nuôi (động vật)"
+  },
+  {
+    "question": "示",
+    "answer1": "Thị",
+    "answer2": "chỉ ra"
+  },
+  {
+    "question": "似",
+    "answer1": "Tự",
+    "answer2": "giống"
+  },
+  {
+    "question": "識",
+    "answer1": "Thức",
+    "answer2": "nhận thức"
+  },
+  {
+    "question": "質",
+    "answer1": "Chất",
+    "answer2": "chất lượng"
+  },
+  {
+    "question": "舎",
+    "answer1": "Xá",
+    "answer2": "cư xá"
+  },
+  {
+    "question": "謝",
+    "answer1": "Tạ",
+    "answer2": "cảm ơn, xin lỗi"
+  },
+  {
+    "question": "寿",
+    "answer1": "Thọ",
+    "answer2": "tuổi thọ"
+  },
+  {
+    "question": "収",
+    "answer1": "Thu",
+    "answer2": "thu nhập"
+  },
+  {
+    "question": "宗",
+    "answer1": "Tông",
+    "answer2": "tôn giáo"
+  },
+  {
+    "question": "就",
+    "answer1": "Tựu",
+    "answer2": "đạt được"
+  },
+  {
+    "question": "州",
+    "answer1": "Châu",
+    "answer2": "bang, tỉnh"
+  },
+  {
+    "question": "拾",
+    "answer1": "Thập",
+    "answer2": "nhặt"
+  },
+  {
+    "question": "従",
+    "answer1": "Tùng",
+    "answer2": "theo, phục tùng"
+  },
+  {
+    "question": "縦",
+    "answer1": "Tung",
+    "answer2": "dọc, chiều dọc"
+  },
+  {
+    "question": "縮",
+    "answer1": "Súc",
+    "answer2": "co rút"
+  },
+  {
+    "question": "熟",
+    "answer1": "Thục",
+    "answer2": "chín, thành thục"
+  },
+  {
+    "question": "順",
+    "answer1": "Thuận",
+    "answer2": "thuận tiện"
+  },
+  {
+    "question": "処",
+    "answer1": "Xử",
+    "answer2": "xử lý"
+  },
+  {
+    "question": "署",
+    "answer1": "Thự",
+    "answer2": "trụ sở"
+  },
+  {
+    "question": "緒",
+    "answer1": "Tự",
+    "answer2": "tự sự, mở đầu"
+  },
+  {
+    "question": "除",
+    "answer1": "Trừ",
+    "answer2": "loại trừ"
+  },
+  {
+    "question": "傷",
+    "answer1": "Thương",
+    "answer2": "vết thương"
+  },
+  {
+    "question": "障",
+    "answer1": "Chướng",
+    "answer2": "chướng ngại"
+  },
+  {
+    "question": "城",
+    "answer1": "Thành",
+    "answer2": "thành lũy"
+  },
+  {
+    "question": "蒸",
+    "answer1": "Chưng",
+    "answer2": "hấp, hơi nước"
+  },
+  {
+    "question": "針",
+    "answer1": "Châm",
+    "answer2": "kim"
+  },
+  {
+    "question": "仁",
+    "answer1": "Nhân",
+    "answer2": "nhân đức"
+  },
+  {
+    "question": "推",
+    "answer1": "Thôi",
+    "answer2": "đẩy, suy đoán"
+  },
+  {
+    "question": "寸",
+    "answer1": "Thốn",
+    "answer2": "đơn vị thốn"
+  },
+  {
+    "question": "盛",
+    "answer1": "Thịnh",
+    "answer2": "thịnh vượng"
+  },
+  {
+    "question": "聖",
+    "answer1": "Thánh",
+    "answer2": "thần thánh"
+  },
+  {
+    "question": "誠",
+    "answer1": "Thành",
+    "answer2": "thành thật"
+  },
+  {
+    "question": "宣",
+    "answer1": "Tuyên",
+    "answer2": "tuyên bố"
+  },
+  {
+    "question": "専",
+    "answer1": "Chuyên",
+    "answer2": "chuyên môn"
+  },
+  {
+    "question": "泉",
+    "answer1": "Tuyền",
+    "answer2": "suối"
+  },
+  {
+    "question": "洗",
+    "answer1": "Tẩy",
+    "answer2": "rửa"
+  },
+  {
+    "question": "染",
+    "answer1": "Nhiễm",
+    "answer2": "nhiễm bẩn"
+  },
+  {
+    "question": "善",
+    "answer1": "Thiện",
+    "answer2": "tốt"
+  },
+  {
+    "question": "奏",
+    "answer1": "Tấu",
+    "answer2": "diễn tấu"
+  },
+  {
+    "question": "窓",
+    "answer1": "Song",
+    "answer2": "cửa sổ"
+  },
+  {
+    "question": "創",
+    "answer1": "Sáng",
+    "answer2": "sáng tạo"
+  },
+  {
+    "question": "装",
+    "answer1": "Trang",
+    "answer2": "trang phục"
+  },
+  {
+    "question": "層",
+    "answer1": "Tằng",
+    "answer2": "tầng lớp"
+  },
+  {
+    "question": "操",
+    "answer1": "Thao",
+    "answer2": "thao tác"
+  },
+  {
+    "question": "蔵",
+    "answer1": "Tàng",
+    "answer2": "tàng trữ"
+  },
+  {
+    "question": "臓",
+    "answer1": "Tạng",
+    "answer2": "nội tạng"
+  },
+  {
+    "question": "存",
+    "answer1": "Tồn",
+    "answer2": "tồn tại"
+  },
+  {
+    "question": "尊",
+    "answer1": "Tôn",
+    "answer2": "tôn trọng"
+  },
+  {
+    "question": "退",
+    "answer1": "Thoái",
+    "answer2": "rút lui"
+  },
+  {
+    "question": "宅",
+    "answer1": "Trạch",
+    "answer2": "nhà"
+  },
+  {
+    "question": "担",
+    "answer1": "Đảm",
+    "answer2": "đảm nhận"
+  },
+  {
+    "question": "探",
+    "answer1": "Tham",
+    "answer2": "tìm kiếm"
+  },
+  {
+    "question": "誕",
+    "answer1": "Đản",
+    "answer2": "sinh ra"
+  },
+  {
+    "question": "段",
+    "answer1": "Đoạn",
+    "answer2": "giai đoạn"
+  },
+  {
+    "question": "暖",
+    "answer1": "Noãn",
+    "answer2": "ấm áp"
+  },
+  {
+    "question": "値",
+    "answer1": "Trị",
+    "answer2": "giá trị"
+  },
+  {
+    "question": "宙",
+    "answer1": "Trụ",
+    "answer2": "vũ trụ"
+  },
+  {
+    "question": "忠",
+    "answer1": "Trung",
+    "answer2": "trung thành"
+  },
+  {
+    "question": "著",
+    "answer1": "Trứ",
+    "answer2": "tác phẩm"
+  },
+  {
+    "question": "庁",
+    "answer1": "Sảnh",
+    "answer2": "văn phòng"
+  },
+  {
+    "question": "頂",
+    "answer1": "Đính",
+    "answer2": "đỉnh, nhận"
+  },
+  {
+    "question": "潮",
+    "answer1": "Triều",
+    "answer2": "thủy triều"
+  },
+  {
+    "question": "賃",
+    "answer1": "Nhẫm",
+    "answer2": "thuê"
+  },
+  {
+    "question": "痛",
+    "answer1": "Thống",
+    "answer2": "đau"
+  },
+  {
+    "question": "展",
+    "answer1": "Tr展",
+    "answer2": "triển khai"
+  },
+  {
+    "question": "討",
+    "answer1": "Thảo",
+    "answer2": "thảo luận"
+  },
+  {
+    "question": "党",
+    "answer1": "Đảng",
+    "answer2": "đảng phái"
+  },
+  {
+    "question": "糖",
+    "answer1": "Đường",
+    "answer2": "đường ăn"
+  },
+  {
+    "question": "届",
+    "answer1": "Giới",
+    "answer2": "tới nơi"
+  },
+  {
+    "question": "難",
+    "answer1": "Nan",
+    "answer2": "khó"
+  },
+  {
+    "question": "乳",
+    "answer1": "Nhũ",
+    "answer2": "sữa"
+  },
+  {
+    "question": "認",
+    "answer1": "Nhận",
+    "answer2": "nhận thức"
+  },
+  {
+    "question": "納",
+    "answer1": "Nạp",
+    "answer2": "nộp"
+  },
+  {
+    "question": "能",
+    "answer1": "Năng",
+    "answer2": "khả năng"
+  },
+  {
+    "question": "脳",
+    "answer1": "Não",
+    "answer2": "não bộ"
+  },
+  {
+    "question": "派",
+    "answer1": "Phái",
+    "answer2": "phe phái"
+  },
+  {
+    "question": "肺",
+    "answer1": "Phế",
+    "answer2": "phổi"
+  },
+  {
+    "question": "俳",
+    "answer1": "Bài",
+    "answer2": "diễn viên"
+  },
+  {
+    "question": "班",
+    "answer1": "Ban",
+    "answer2": "nhóm"
+  },
+  {
+    "question": "晩",
+    "answer1": "Vãn",
+    "answer2": "buổi tối"
+  },
+  {
+    "question": "否",
+    "answer1": "Phủ",
+    "answer2": "phủ định"
+  },
+  {
+    "question": "批",
+    "answer1": "Phê",
+    "answer2": "phê bình"
+  },
+  {
+    "question": "悲",
+    "answer1": "Bi",
+    "answer2": "buồn bã"
+  },
+  {
+    "question": "微",
+    "answer1": "Vi",
+    "answer2": "nhỏ bé"
+  },
+  {
+    "question": "浮",
+    "answer1": "Phù",
+    "answer2": "nổi"
+  },
+  {
+    "question": "普",
+    "answer1": "Phổ",
+    "answer2": "phổ cập"
+  },
+  {
+    "question": "婦",
+    "answer1": "Phụ",
+    "answer2": "phụ nữ"
+  },
+  {
+    "question": "富",
+    "answer1": "Phú",
+    "answer2": "giàu có"
+  },
+  {
+    "question": "布",
+    "answer1": "Bố",
+    "answer2": "vải"
+  },
+  {
+    "question": "武",
+    "answer1": "Võ",
+    "answer2": "võ thuật"
+  },
+  {
+    "question": "副",
+    "answer1": "Phó",
+    "answer2": "phụ, phó"
+  },
+  {
+    "question": "復",
+    "answer1": "Phục",
+    "answer2": "phục hồi"
+  },
+  {
+    "question": "複",
+    "answer1": "Phức",
+    "answer2": "phức tạp"
+  },
+  {
+    "question": "仏",
+    "answer1": "Phật",
+    "answer2": "phật giáo"
+  },
+  {
+    "question": "編",
+    "answer1": "Biên",
+    "answer2": "biên tập"
+  },
+  {
+    "question": "弁",
+    "answer1": "Biện",
+    "answer2": "biện luận"
+  },
+  {
+    "question": "保",
+    "answer1": "Bảo",
+    "answer2": "bảo vệ"
+  },
+  {
+    "question": "墓",
+    "answer1": "Mộ",
+    "answer2": "ngôi mộ"
+  },
+  {
+    "question": "報",
+    "answer1": "Báo",
+    "answer2": "báo cáo"
+  },
+  {
+    "question": "豊",
+    "answer1": "Phong",
+    "answer2": "phong phú"
+  },
+  {
+    "question": "防",
+    "answer1": "Phòng",
+    "answer2": "phòng tránh"
+  },
+  {
+    "question": "訪",
+    "answer1": "Phóng/Phỏng",
+    "answer2": "thăm hỏi"
+  },
+  {
+    "question": "某",
+    "answer1": "Mỗ",
+    "answer2": "nào đó"
+  },
+  {
+    "question": "棒",
+    "answer1": "Bổng",
+    "answer2": "cây gậy"
+  },
+  {
+    "question": "枚",
+    "answer1": "Mai",
+    "answer2": "tấm (đơn vị đếm)"
+  },
+  {
+    "question": "幕",
+    "answer1": "Mạc",
+    "answer2": "màn, rèm"
+  },
+  {
+    "question": "密",
+    "answer1": "Mật",
+    "answer2": "bí mật"
+  },
+  {
+    "question": "盟",
+    "answer1": "Minh",
+    "answer2": "liên minh"
+  },
+  {
+    "question": "模",
+    "answer1": "Mô",
+    "answer2": "mô hình"
+  },
+  {
+    "question": "訳",
+    "answer1": "Dịch",
+    "answer2": "phiên dịch"
+  },
+  {
+    "question": "郵",
+    "answer1": "Bưu",
+    "answer2": "bưu điện"
+  },
+  {
+    "question": "優",
+    "answer1": "Ưu",
+    "answer2": "ưu tú"
+  },
+  {
+    "question": "勇",
+    "answer1": "Dũng",
+    "answer2": "dũng cảm"
+  },
+  {
+    "question": "要",
+    "answer1": "Yếu",
+    "answer2": "điểm quan trọng"
+  },
+  {
+    "question": "養",
+    "answer1": "Dưỡng",
+    "answer2": "nuôi dưỡng"
+  },
+  {
+    "question": "浴",
+    "answer1": "Dục",
+    "answer2": "tắm"
+  },
+  {
+    "question": "翌",
+    "answer1": "Dực",
+    "answer2": "ngày hôm sau"
+  },
+  {
+    "question": "乱",
+    "answer1": "Loạn",
+    "answer2": "hỗn loạn"
+  },
+  {
+    "question": "卵",
+    "answer1": "Noãn",
+    "answer2": "trứng"
+  },
+  {
+    "question": "覧",
+    "answer1": "Lãm",
+    "answer2": "triển lãm"
+  },
+  {
+    "question": "裏",
+    "answer1": "Lý",
+    "answer2": "mặt sau"
+  },
+  {
+    "question": "律",
+    "answer1": "Luật",
+    "answer2": "luật pháp"
+  },
+  {
+    "question": "臨",
+    "answer1": "Lâm",
+    "answer2": "lâm thời"
+  },
+  {
+    "question": "朗",
+    "answer1": "Lãng",
+    "answer2": "rõ ràng"
+  },
+  {
+    "question": "論",
+    "answer1": "Luận",
+    "answer2": "lý luận"
+  },
+  {
+    "question": "輪",
+    "answer1": "Luân",
+    "answer2": "bánh xe"
+  },
+  {
+    "question": "類",
+    "answer1": "Loại",
+    "answer2": "chủng loại"
+  },
+  {
+    "question": "令",
+    "answer1": "Lệnh",
+    "answer2": "mệnh lệnh"
+  },
+  {
+    "question": "冷",
+    "answer1": "Lãnh",
+    "answer2": "lạnh"
+  },
+  {
+    "question": "歴",
+    "answer1": "Lịch",
+    "answer2": "lịch sử"
+  },
+  {
+    "question": "劣",
+    "answer1": "Liệt",
+    "answer2": "kém"
+  },
+  {
+    "question": "烈",
+    "answer1": "Liệt",
+    "answer2": "mãnh liệt"
+  },
+  {
+    "question": "恋",
+    "answer1": "Luyến",
+    "answer2": "tình yêu"
+  },
+  {
+    "question": "練",
+    "answer1": "Luyện",
+    "answer2": "luyện tập"
+  },
+  {
+    "question": "路",
+    "answer1": "Lộ",
+    "answer2": "con đường"
+  },
+  {
+    "question": "録",
+    "answer1": "Lục",
+    "answer2": "ghi chép"
+  },
+  {
+    "question": "論",
+    "answer1": "Luận",
+    "answer2": "bàn luận"
+  },
+  {
+    "question": "輪",
+    "answer1": "Luân",
+    "answer2": "bánh xe"
+  },
+  {
+    "question": "類",
+    "answer1": "Loại",
+    "answer2": "loại, chủng loại"
+  },
+  {
+    "question": "令",
+    "answer1": "Lệnh",
+    "answer2": "mệnh lệnh"
+  },
+  {
+    "question": "冷",
+    "answer1": "Lãnh",
+    "answer2": "lạnh"
+  },
+  {
+    "question": "歴",
+    "answer1": "Lịch",
+    "answer2": "lịch sử"
+  },
+  {
+    "question": "劣",
+    "answer1": "Liệt",
+    "answer2": "kém, yếu"
+  },
+  {
+    "question": "烈",
+    "answer1": "Liệt",
+    "answer2": "mãnh liệt"
+  },
+  {
+    "question": "恋",
+    "answer1": "Luyến",
+    "answer2": "tình yêu"
+  },
+  {
+    "question": "練",
+    "answer1": "Luyện",
+    "answer2": "luyện tập"
+  },
+  {
+    "question": "路",
+    "answer1": "Lộ",
+    "answer2": "con đường"
+  },
+  {
+    "question": "露",
+    "answer1": "Lộ",
+    "answer2": "sương, lộ ra"
+  },
+  {
+    "question": "労",
+    "answer1": "Lao",
+    "answer2": "lao động"
+  },
+  {
+    "question": "録",
+    "answer1": "Lục",
+    "answer2": "ghi âm, ghi chép"
+  },
+  {
+    "question": "論",
+    "answer1": "Luận",
+    "answer2": "lý luận"
+  },
+  {
+    "question": "湾",
+    "answer1": "Loan",
+    "answer2": "vịnh"
+  },
+  {
+    "question": "惑",
+    "answer1": "Hoặc",
+    "answer2": "lúng túng, mê hoặc"
+  },
+  {
+    "question": "枠",
+    "answer1": "Khung",
+    "answer2": "khung viền"
+  },
+  {
+    "question": "腕",
+    "answer1": "Oản",
+    "answer2": "cánh tay"
+  },
+  {
+    "question": "依",
+    "answer1": "Y",
+    "answer2": "phụ thuộc"
+  },
+  {
+    "question": "威",
+    "answer1": "Uy",
+    "answer2": "uy lực"
+  },
+  {
+    "question": "為",
+    "answer1": "Vi",
+    "answer2": "làm, hành động"
+  },
+  {
+    "question": "偉",
+    "answer1": "Vĩ",
+    "answer2": "vĩ đại"
+  },
+  {
+    "question": "違",
+    "answer1": "Vi",
+    "answer2": "sai, khác"
+  },
+  {
+    "question": "維",
+    "answer1": "Duy",
+    "answer2": "duy trì"
+  },
+  {
+    "question": "緯",
+    "answer1": "Vĩ",
+    "answer2": "vĩ độ"
+  },
+  {
+    "question": "壱",
+    "answer1": "Nhất",
+    "answer2": "một (chữ số trang trọng)"
+  },
+  {
+    "question": "逸",
+    "answer1": "Dật",
+    "answer2": "lạc, chệch hướng"
+  },
+  {
+    "question": "芋",
+    "answer1": "Du",
+    "answer2": "khoai"
+  },
+  {
+    "question": "陰",
+    "answer1": "Âm",
+    "answer2": "bóng râm"
+  },
+  {
+    "question": "隠",
+    "answer1": "Ẩn",
+    "answer2": "ẩn giấu"
+  },
+  {
+    "question": "韻",
+    "answer1": "Vần",
+    "answer2": "vần điệu"
+  },
+  {
+    "question": "唄",
+    "answer1": "Bối",
+    "answer2": "hát bội"
+  },
+  {
+    "question": "羽",
+    "answer1": "Vũ",
+    "answer2": "lông chim"
+  },
+  {
+    "question": "浦",
+    "answer1": "Phổ",
+    "answer2": "vịnh nhỏ"
+  },
+  {
+    "question": "宛",
+    "answer1": "Uyển",
+    "answer2": "địa chỉ gửi"
+  },
+  {
+    "question": "宴",
+    "answer1": "Yến",
+    "answer2": "tiệc"
+  },
+  {
+    "question": "援",
+    "answer1": "Viện",
+    "answer2": "viện trợ"
+  },
+  {
+    "question": "煙",
+    "answer1": "Yên",
+    "answer2": "khói"
+  },
+  {
+    "question": "縁",
+    "answer1": "Duyên",
+    "answer2": "duyên phận"
+  },
+  {
+    "question": "汚",
+    "answer1": "Ô",
+    "answer2": "bẩn"
+  },
+  {
+    "question": "凹",
+    "answer1": "Óa",
+    "answer2": "lõm"
+  },
+  {
+    "question": "押",
+    "answer1": "Áp",
+    "answer2": "ấn, đóng"
+  },
+  {
+    "question": "応",
+    "answer1": "Ứng",
+    "answer2": "đáp ứng"
+  },
+  {
+    "question": "往",
+    "answer1": "Vãng",
+    "answer2": "qua lại"
+  },
+  {
+    "question": "桜",
+    "answer1": "Anh",
+    "answer2": "hoa anh đào"
+  },
+  {
+    "question": "欧",
+    "answer1": "Âu",
+    "answer2": "châu Âu"
+  },
+  {
+    "question": "殴",
+    "answer1": "Ẩu",
+    "answer2": "đánh, ẩu đả"
+  },
+  {
+    "question": "乙",
+    "answer1": "Ất",
+    "answer2": "thứ hai"
+  },
+  {
+    "question": "卸",
+    "answer1": "Tá",
+    "answer2": "bán sỉ"
+  },
+  {
+    "question": "恩",
+    "answer1": "Ân",
+    "answer2": "ân huệ"
+  },
+  {
+    "question": "俺",
+    "answer1": "Yêm",
+    "answer2": "tôi (thân mật)"
+  },
+  {
+    "question": "仮",
+    "answer1": "Giả",
+    "answer2": "tạm thời"
+  },
+  {
+    "question": "価",
+    "answer1": "Giá",
+    "answer2": "giá trị"
+  },
+  {
+    "question": "佳",
+    "answer1": "Gia",
+    "answer2": "tốt đẹp"
+  },
+  {
+    "question": "嫁",
+    "answer1": "Giá",
+    "answer2": "lấy chồng"
+  },
+  {
+    "question": "暇",
+    "answer1": "Hạ",
+    "answer2": "rảnh rỗi"
+  },
+  {
+    "question": "介",
+    "answer1": "Giới",
+    "answer2": "giới thiệu"
+  },
+  {
+    "question": "戒",
+    "answer1": "Giới",
+    "answer2": "cảnh báo"
+  },
+  {
+    "question": "怪",
+    "answer1": "Quái",
+    "answer2": "kỳ lạ"
+  },
+  {
+    "question": "拐",
+    "answer1": "Giảo",
+    "answer2": "bắt cóc"
+  },
+  {
+    "question": "悔",
+    "answer1": "Hối",
+    "answer2": "hối hận"
+  },
+  {
+    "question": "皆",
+    "answer1": "Giai",
+    "answer2": "tất cả"
+  },
+  {
+    "question": "慰",
+    "answer1": "Úy",
+    "answer2": "an ủi"
+  },
+  {
+    "question": "為",
+    "answer1": "Vi",
+    "answer2": "làm, vì"
+  },
+  {
+    "question": "遺",
+    "answer1": "Di",
+    "answer2": "di sản"
+  },
+  {
+    "question": "域",
+    "answer1": "Vực",
+    "answer2": "khu vực"
+  },
+  {
+    "question": "育",
+    "answer1": "Dục",
+    "answer2": "nuôi dưỡng"
+  },
+  {
+    "question": "一",
+    "answer1": "Nhất",
+    "answer2": "số một (biến thể trang trọng)"
+  },
+  {
+    "question": "逸",
+    "answer1": "Dật",
+    "answer2": "thoát, lạc"
+  },
+  {
+    "question": "稲",
+    "answer1": "Đạo",
+    "answer2": "lúa"
+  },
+  {
+    "question": "芋",
+    "answer1": "Du",
+    "answer2": "khoai"
+  },
+  {
+    "question": "印",
+    "answer1": "Ấn",
+    "answer2": "con dấu"
+  },
+  {
+    "question": "因",
+    "answer1": "Nhân",
+    "answer2": "nguyên nhân"
+  },
+  {
+    "question": "咽",
+    "answer1": "Yết",
+    "answer2": "yết hầu"
+  },
+  {
+    "question": "姻",
+    "answer1": "Nhân",
+    "answer2": "hôn nhân"
+  },
+  {
+    "question": "陰",
+    "answer1": "Âm",
+    "answer2": "bóng tối"
+  },
+  {
+    "question": "隠",
+    "answer1": "Ẩn",
+    "answer2": "ẩn náu"
+  },
+  {
+    "question": "韻",
+    "answer1": "Vần",
+    "answer2": "vần thơ"
+  },
+  {
+    "question": "唄",
+    "answer1": "Bối",
+    "answer2": "bài hát"
+  },
+  {
+    "question": "鬱",
+    "answer1": "Uất",
+    "answer2": "uất ức"
+  },
+  {
+    "question": "畝",
+    "answer1": "Mẫu",
+    "answer2": "đơn vị đo ruộng"
+  },
+  {
+    "question": "浦",
+    "answer1": "Phổ",
+    "answer2": "bờ biển"
+  },
+  {
+    "question": "影",
+    "answer1": "Ảnh",
+    "answer2": "cái bóng"
+  },
+  {
+    "question": "鋭",
+    "answer1": "Nhuệ",
+    "answer2": "nhọn, sắc bén"
+  },
+  {
+    "question": "疫",
+    "answer1": "Dịch",
+    "answer2": "dịch bệnh"
+  },
+  {
+    "question": "益",
+    "answer1": "Ích",
+    "answer2": "lợi ích"
+  },
+  {
+    "question": "液",
+    "answer1": "Dịch",
+    "answer2": "dung dịch"
+  },
+  {
+    "question": "猿",
+    "answer1": "Viên",
+    "answer2": "con khỉ"
+  },
+  {
+    "question": "縁",
+    "answer1": "Duyên",
+    "answer2": "duyên nợ"
+  },
+  {
+    "question": "艶",
+    "answer1": "Diễm",
+    "answer2": "bóng đẹp"
+  },
+  {
+    "question": "鉛",
+    "answer1": "Duyên",
+    "answer2": "chì (kim loại)"
+  },
+  {
+    "question": "塩",
+    "answer1": "Diêm",
+    "answer2": "muối"
+  },
+  {
+    "question": "汚",
+    "answer1": "Ô",
+    "answer2": "dơ bẩn"
+  },
+  {
+    "question": "凹",
+    "answer1": "Óa",
+    "answer2": "lõm"
+  },
+  {
+    "question": "押",
+    "answer1": "Áp",
+    "answer2": "ấn nút"
+  },
+  {
+    "question": "旺",
+    "answer1": "Vượng",
+    "answer2": "thịnh vượng"
+  },
+  {
+    "question": "王",
+    "answer1": "Vương",
+    "answer2": "vua"
+  },
+  {
+    "question": "往",
+    "answer1": "Vãng",
+    "answer2": "qua lại"
+  },
+  {
+    "question": "欧",
+    "answer1": "Âu",
+    "answer2": "Âu châu"
+  },
+  {
+    "question": "殴",
+    "answer1": "Ẩu",
+    "answer2": "đánh đấm"
+  },
+  {
+    "question": "岡",
+    "answer1": "Cương",
+    "answer2": "đồi, gò"
+  },
+  {
+    "question": "沖",
+    "answer1": "Xung",
+    "answer2": "vùng biển xa bờ"
+  },
+  {
+    "question": "憶",
+    "answer1": "Ức",
+    "answer2": "kí ức"
+  },
+  {
+    "question": "臆",
+    "answer1": "Ức",
+    "answer2": "rụt rè, e sợ"
+  },
+  {
+    "question": "虞",
+    "answer1": "Ngụy",
+    "answer2": "lo lắng"
+  },
+  {
+    "question": "卦",
+    "answer1": "Quái",
+    "answer2": "quẻ bói"
+  },
+  {
+    "question": "詠",
+    "answer1": "Vịnh",
+    "answer2": "ngâm thơ"
+  },
+  {
+    "question": "鋼",
+    "answer1": "Cương",
+    "answer2": "thép"
+  },
+  {
+    "question": "岡",
+    "answer1": "Cương",
+    "answer2": "gò đất"
+  },
+  {
+    "question": "億",
+    "answer1": "Ức",
+    "answer2": "trăm triệu"
+  },
+  {
+    "question": "卸",
+    "answer1": "Tá",
+    "answer2": "bán buôn"
+  },
+  {
+    "question": "恩",
+    "answer1": "Ân",
+    "answer2": "ơn huệ"
+  },
+  {
+    "question": "温",
+    "answer1": "Ôn",
+    "answer2": "ấm áp"
+  },
+  {
+    "question": "穏",
+    "answer1": "Ổn",
+    "answer2": "ôn hòa"
+  },
+  {
+    "question": "下",
+    "answer1": "Hạ",
+    "answer2": "phía dưới"
+  },
+  {
+    "question": "化",
+    "answer1": "Hóa",
+    "answer2": "biến hóa"
+  },
+  {
+    "question": "価",
+    "answer1": "Giá",
+    "answer2": "giá cả"
+  },
+  {
+    "question": "佳",
+    "answer1": "Gia",
+    "answer2": "đẹp, tốt"
+  },
+  {
+    "question": "嫁",
+    "answer1": "Giá",
+    "answer2": "cô dâu"
+  },
+  {
+    "question": "暇",
+    "answer1": "Hạ",
+    "answer2": "rảnh rỗi"
+  },
+  {
+    "question": "介",
+    "answer1": "Giới",
+    "answer2": "giới thiệu"
+  },
+  {
+    "question": "会",
+    "answer1": "Hội",
+    "answer2": "gặp gỡ"
+  },
+  {
+    "question": "解",
+    "answer1": "Giải",
+    "answer2": "giải thích"
+  },
+  {
+    "question": "回",
+    "answer1": "Hồi",
+    "answer2": "xoay"
+  },
+  {
+    "question": "悔",
+    "answer1": "Hối",
+    "answer2": "hối tiếc"
+  },
+  {
+    "question": "懐",
+    "answer1": "Hoài",
+    "answer2": "hoài niệm"
+  },
+  {
+    "question": "戒",
+    "answer1": "Giới",
+    "answer2": "cảnh giác"
+  },
+  {
+    "question": "拐",
+    "answer1": "Giảo",
+    "answer2": "dụ dỗ"
+  },
+  {
+    "question": "改",
+    "answer1": "Cải",
+    "answer2": "thay đổi"
+  },
+  {
+    "question": "械",
+    "answer1": "Giới",
+    "answer2": "máy móc"
+  },
+  {
+    "question": "害",
+    "answer1": "Hại",
+    "answer2": "thiệt hại"
+  },
+  {
+    "question": "街",
+    "answer1": "Nhai",
+    "answer2": "khu phố"
+  },
+  {
+    "question": "各",
+    "answer1": "Các",
+    "answer2": "các loại"
+  },
+  {
+    "question": "覚",
+    "answer1": "Giác",
+    "answer2": "nhớ"
+  },
+  {
+    "question": "潟",
+    "answer1": "Tích",
+    "answer2": "vũng nước"
+  },
+  {
+    "question": "割",
+    "answer1": "Cát",
+    "answer2": "chia cắt"
+  },
+  {
+    "question": "喝",
+    "answer1": "Hát",
+    "answer2": "quát mắng"
+  },
+  {
+    "question": "括",
+    "answer1": "Quát",
+    "answer2": "bao quát"
+  },
+  {
+    "question": "滑",
+    "answer1": "Hoạt",
+    "answer2": "trơn trượt"
+  },
+  {
+    "question": "褐",
+    "answer1": "Hạt",
+    "answer2": "nâu"
+  },
+  {
+    "question": "轄",
+    "answer1": "Hạt",
+    "answer2": "quản lý"
+  },
+  {
+    "question": "且",
+    "answer1": "Thả",
+    "answer2": "và, hơn nữa"
+  },
+  {
+    "question": "株",
+    "answer1": "Chu",
+    "answer2": "cổ phiếu"
+  },
+  {
+    "question": "釜",
+    "answer1": "Phủ",
+    "answer2": "cái vạc"
+  },
+  {
+    "question": "鎌",
+    "answer1": "Liêm",
+    "answer2": "lưỡi liềm"
+  },
+  {
+    "question": "刈",
+    "answer1": "Ngải",
+    "answer2": "gặt hái"
+  },
+  {
+    "question": "甘",
+    "answer1": "Cam",
+    "answer2": "ngọt"
+  },
+  {
+    "question": "汗",
+    "answer1": "Hãn",
+    "answer2": "mồ hôi"
+  },
+  {
+    "question": "缶",
+    "answer1": "Phữu",
+    "answer2": "lon, hộp thiếc"
+  },
+  {
+    "question": "肝",
+    "answer1": "Can",
+    "answer2": "gan"
+  },
+  {
+    "question": "冠",
+    "answer1": "Quán",
+    "answer2": "vương miện"
+  },
+  {
+    "question": "陥",
+    "answer1": "Hãm",
+    "answer2": "sa vào"
+  },
+  {
+    "question": "乾",
+    "answer1": "Kiền",
+    "answer2": "khô ráo"
+  },
+  {
+    "question": "勘",
+    "answer1": "Khám",
+    "answer2": "xem xét"
+  },
+  {
+    "question": "患",
+    "answer1": "Hoạn",
+    "answer2": "bệnh hoạn"
+  },
+  {
+    "question": "貫",
+    "answer1": "Quán",
+    "answer2": "xuyên suốt"
+  },
+  {
+    "question": "寒",
+    "answer1": "Hàn",
+    "answer2": "lạnh"
+  },
+  {
+    "question": "勧",
+    "answer1": "Khuyến",
+    "answer2": "khuyên bảo"
+  },
+  {
+    "question": "喚",
+    "answer1": "Hoán",
+    "answer2": "hoán đổi"
+  },
+  {
+    "question": "換",
+    "answer1": "Hoán",
+    "answer2": "thay đổi"
+  },
+  {
+    "question": "敢",
+    "answer1": "Cảm",
+    "answer2": "gan dạ"
+  },
+  {
+    "question": "棺",
+    "answer1": "Quan",
+    "answer2": "quan tài"
+  },
+  {
+    "question": "款",
+    "answer1": "Khoản",
+    "answer2": "điều khoản"
+  },
+  {
+    "question": "汗",
+    "answer1": "Hãn",
+    "answer2": "mồ hôi"
+  },
+  {
+    "question": "缶",
+    "answer1": "Phữu",
+    "answer2": "đồ hộp"
+  },
+  {
+    "question": "肝",
+    "answer1": "Can",
+    "answer2": "gan"
+  },
+  {
+    "question": "観",
+    "answer1": "Quan",
+    "answer2": "quan sát"
+  },
+  {
+    "question": "環",
+    "answer1": "Hoàn",
+    "answer2": "vòng, nhẫn"
+  },
+  {
+    "question": "簡",
+    "answer1": "Giản",
+    "answer2": "đơn giản"
+  },
+  {
+    "question": "危",
+    "answer1": "Nguy",
+    "answer2": "nguy hiểm"
+  },
+  {
+    "question": "机",
+    "answer1": "Kỷ",
+    "answer2": "cái bàn"
+  },
+  {
+    "question": "輝",
+    "answer1": "Huy",
+    "answer2": "tỏa sáng"
+  },
+  {
+    "question": "飢",
+    "answer1": "Cơ",
+    "answer2": "đói"
+  },
+  {
+    "question": "鬼",
+    "answer1": "Quỷ",
+    "answer2": "con quỷ"
+  },
+  {
+    "question": "棋",
+    "answer1": "Kỳ",
+    "answer2": "cờ tướng"
+  },
+  {
+    "question": "棄",
+    "answer1": "Khi",
+    "answer2": "vứt bỏ"
+  },
+  {
+    "question": "旗",
+    "answer1": "Kỳ",
+    "answer2": "lá cờ"
+  },
+  {
+    "question": "既",
+    "answer1": "Kí",
+    "answer2": "đã rồi"
+  },
+  {
+    "question": "概",
+    "answer1": "Khái",
+    "answer2": "khái niệm"
+  },
+  {
+    "question": "欺",
+    "answer1": "Khi",
+    "answer2": "lừa dối"
+  },
+  {
+    "question": "寄",
+    "answer1": "Kí",
+    "answer2": "gửi"
+  },
+  {
+    "question": "稀",
+    "answer1": "Hy",
+    "answer2": "hiếm"
+  },
+  {
+    "question": "器",
+    "answer1": "Khí",
+    "answer2": "dụng cụ"
+  },
+  {
+    "question": "基",
+    "answer1": "Cơ",
+    "answer2": "cơ bản"
+  },
+  {
+    "question": "寄",
+    "answer1": "Kí",
+    "answer2": "ghé vào"
+  },
+  {
+    "question": "規",
+    "answer1": "Quy",
+    "answer2": "quy tắc"
+  },
+  {
+    "question": "喜",
+    "answer1": "Hỉ",
+    "answer2": "vui vẻ"
+  },
+  {
+    "question": "揮",
+    "answer1": "Huy",
+    "answer2": "chỉ huy"
+  },
+  {
+    "question": "机",
+    "answer1": "Kỷ",
+    "answer2": "cái bàn"
+  }
+]
