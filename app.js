@@ -275,17 +275,27 @@ async function startGame(mode, level, partFile) {
 }
 
 function buildChoices(correctItem, poolItems) {
-  // correct + 3 distractors từ các item khác
-  const others = poolItems.filter(x =>
-    !(x.question === correctItem.question && x.answer1 === correctItem.answer1 && x.answer2 === correctItem.answer2)
-  );
-  const picked = shuffle(others).slice(0, 3);
+  // Đúng + 3 đáp án nhiễu; chỉ hiển thị answer2 nên không được trùng answer2
+  const correctAnswer2 = (correctItem.answer2 ?? "").trim();
+  const others = poolItems.filter(x => {
+    if (x.question === correctItem.question && x.answer1 === correctItem.answer1 && x.answer2 === correctItem.answer2)
+      return false;
+    if ((x.answer2 ?? "").trim() === correctAnswer2) return false;
+    return true;
+  });
+  const seen = new Set([correctAnswer2]);
+  const picked = [];
+  for (const x of shuffle(others)) {
+    const a2 = (x.answer2 ?? "").trim();
+    if (seen.has(a2)) continue;
+    seen.add(a2);
+    picked.push(x);
+    if (picked.length >= 3) break;
+  }
   const choices = shuffle([correctItem, ...picked]);
-
   const correctIndex = choices.findIndex(x =>
     x.question === correctItem.question && x.answer1 === correctItem.answer1 && x.answer2 === correctItem.answer2
   );
-
   return { choices, correctIndex };
 }
 
