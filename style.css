@@ -8,9 +8,9 @@ body { margin: 0; background: #0b0e14; color: #e7eaf0; }
 .view { margin-top: 16px; }
 
 .card { background: #121826; border: 1px solid #202a3c; border-radius: 14px; padding: 16px; }
-.cardTitleRow { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-.cardTitleRow .h1 { margin: 0; flex: 0 1 auto; }
-.cardTitleRow .btnSmall { flex-shrink: 0; }
+.cardTitleRow { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: nowrap; }
+.cardTitleRow .h1 { margin: 0; flex: 0 1 auto; min-width: 0; }
+.cardTitleRow .btnSmall { flex-shrink: 0; white-space: nowrap; }
 .cardHome { padding: 32px; }
 .cardHome .h1 { font-size: 32px; margin-bottom: 20px; }
 .cardHome .grid { gap: 24px; }
@@ -85,8 +85,8 @@ body { margin: 0; background: #0b0e14; color: #e7eaf0; }
 .feedback { margin-top: 12px; padding: 12px; border-radius: 12px; border: 1px solid #2a3550; background: #0f1422; }
 .feedback.ok { border-color: #2d7a4d; }
 .feedback.ng { border-color: #8a2f2f; }
-.row { display:flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
-.row .btnSmall { flex: 1; min-width: 160px; text-align:center; }
+.row { display: flex; gap: 10px; flex-wrap: nowrap; margin-top: 12px; }
+.row .btnSmall { flex: 1 1 0; min-width: 0; text-align: center; white-space: nowrap; }
 .btnSmall { padding: 10px 12px; border-radius: 12px; border: 1px solid #2a3550; background: #172038; color: #e7eaf0; cursor: pointer; }
 
 .btnWrap { display: flex; align-items: stretch; gap: 8px; }

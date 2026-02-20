@@ -19,7 +19,9 @@ function keyDone(accountId, mode, level, partFile) {
   return `done:${accountId}:${mode}:${level}:${partFile}`;
 }
 
-function partFileToLabel(partFile) {
+function partFileToLabel(partFile, mode) {
+  if ((partFile || "").toLowerCase() === "all.json")
+    return mode === "kanji" ? "Tất cả chữ Hán" : "Tất cả từ vựng";
   const m = /part(\d+)\.json/i.exec(partFile || "");
   const n = m ? parseInt(m[1], 10) : 0;
   return n ? `Phần ${n}` : partFile || "";
@@ -232,7 +234,7 @@ function renderParts(mode, level) {
       <button class="btn btnPart" type="button">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
           <div>
-            <div class="choiceLine1">Phần ${String(i+1).padStart(2,"0")}</div>
+            <div class="choiceLine1">${partFileToLabel(file, mode)}</div>
           </div>
           <span class="badge ${done ? "done" : ""}">${done ? "Đã xong" : "Chưa xong"}</span>
         </div>
@@ -275,27 +277,17 @@ async function startGame(mode, level, partFile) {
 }
 
 function buildChoices(correctItem, poolItems) {
-  // Đúng + 3 đáp án nhiễu; chỉ hiển thị answer2 nên không được trùng answer2
-  const correctAnswer2 = (correctItem.answer2 ?? "").trim();
-  const others = poolItems.filter(x => {
-    if (x.question === correctItem.question && x.answer1 === correctItem.answer1 && x.answer2 === correctItem.answer2)
-      return false;
-    if ((x.answer2 ?? "").trim() === correctAnswer2) return false;
-    return true;
-  });
-  const seen = new Set([correctAnswer2]);
-  const picked = [];
-  for (const x of shuffle(others)) {
-    const a2 = (x.answer2 ?? "").trim();
-    if (seen.has(a2)) continue;
-    seen.add(a2);
-    picked.push(x);
-    if (picked.length >= 3) break;
-  }
+  // correct + 3 distractors từ các item khác
+  const others = poolItems.filter(x =>
+    !(x.question === correctItem.question && x.answer1 === correctItem.answer1 && x.answer2 === correctItem.answer2)
+  );
+  const picked = shuffle(others).slice(0, 3);
   const choices = shuffle([correctItem, ...picked]);
+
   const correctIndex = choices.findIndex(x =>
     x.question === correctItem.question && x.answer1 === correctItem.answer1 && x.answer2 === correctItem.answer2
   );
+
   return { choices, correctIndex };
 }
 
@@ -316,7 +308,7 @@ function renderQuestion(feedback = null) {
     correctIndex = state.currentCorrectIndex;
   }
 
-  const partLabel = partFileToLabel(state.partFile);
+  const partLabel = partFileToLabel(state.partFile, state.mode);
   view.innerHTML = `
     <div class="card">
       <div class="questionCenter">
@@ -399,7 +391,7 @@ function renderFinish() {
   view.innerHTML = `
     <div class="card">
       <h1 class="h1">🎉 Hoàn thành phần!</h1>
-      <p class="sub">${state.mode === "vocab" ? "Từ vựng" : "Chữ Hán"} / ${state.level} / ${state.partFile}</p>
+      <p class="sub">${state.mode === "vocab" ? "Từ vựng" : "Chữ Hán"} / ${state.level} / ${partFileToLabel(state.partFile, state.mode)}</p>
       <div class="row">
         <button class="btnSmall" id="again">Chơi lại phần này</button>
         <button class="btnSmall" id="toList">Về danh sách phần</button>
