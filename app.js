@@ -16,6 +16,57 @@ const STORAGE_KEY_ACCOUNT = "kanji-quiz:currentAccount";
 const DONE_CONFIG_PATH = "done-config.json";
 const DATA_BASE_URL = "https://raw.githubusercontent.com/maiquan2103/Japanese-file/refs/heads/master";
 const BJT_STUDY_BASE_PATH = `${DATA_BASE_URL}/bjt-study`;
+const CD1_ANSWER_CANDIDATE_FILES = ["CD1-answer.json", "list.json", "answers.json", "answer.json", "data.json"];
+
+function getCd1AnswerBaseCandidatePaths(book) {
+  return [
+    `${BJT_STUDY_BASE_PATH}/${book}/CD1-answer`,
+    `${BJT_STUDY_BASE_PATH}/${book}/CD1/CD1-answer`,
+    `${book}/CD1-answer`,
+    `${book}/CD1/CD1-answer`,
+    `bjt-study/${book}/CD1-answer`,
+    `bjt-study/${book}/CD1/CD1-answer`,
+    "CD1-answer",
+    "CD1/CD1-answer"
+  ];
+}
+
+function getCd1ImageBaseCandidatePaths(book, answerBasePath) {
+  const fromAnswer = answerBasePath ? [answerBasePath.replace(/\/CD1-answer$/, "/CD1-image")] : [];
+  return [
+    ...fromAnswer,
+    `${BJT_STUDY_BASE_PATH}/${book}/CD1-image`,
+    `${BJT_STUDY_BASE_PATH}/${book}/CD1/CD1-image`,
+    `${book}/CD1-image`,
+    `${book}/CD1/CD1-image`,
+    `bjt-study/${book}/CD1-image`,
+    `bjt-study/${book}/CD1/CD1-image`,
+    "CD1-image",
+    "CD1/CD1-image"
+  ];
+}
+
+function getCd1AudioBaseCandidatePaths(book, answerBasePath) {
+  const fromAnswer = answerBasePath ? [
+    answerBasePath.replace(/\/CD1-answer$/, "/CD1-audio"),
+    answerBasePath.replace(/\/CD1-answer$/, "/CD1")
+  ] : [];
+  return [
+    ...fromAnswer,
+    `${BJT_STUDY_BASE_PATH}/${book}/CD1-audio`,
+    `${BJT_STUDY_BASE_PATH}/${book}/CD1/CD1-audio`,
+    `${BJT_STUDY_BASE_PATH}/${book}/CD1`,
+    `${book}/CD1-audio`,
+    `${book}/CD1/CD1-audio`,
+    `${book}/CD1`,
+    `bjt-study/${book}/CD1-audio`,
+    `bjt-study/${book}/CD1/CD1-audio`,
+    `bjt-study/${book}/CD1`,
+    "CD1-audio",
+    "CD1/CD1-audio",
+    "CD1"
+  ];
+}
 
 function keyDone(accountId, mode, level, partFile) {
   return `done:${accountId}:${mode}:${level}:${partFile}`;
@@ -155,7 +206,7 @@ function renderHome() {
       <div class="grid grid2">
         <button class="btn" id="goVocab">Từ vựng</button>
         <button class="btn" id="goKanji">Chữ Hán</button>
-        <button class="btn" id="goNgheBjt">Nghe BJT</button>
+        <button class="btn" id="goNgheBjt">Học BJT</button>
       </div>
     </div>
   `;
@@ -169,7 +220,7 @@ function renderNgheBjt() {
   view.innerHTML = `
     <div class="card">
       <div class="cardTitleRow">
-        <h1 class="h1">Nghe BJT</h1>
+        <h1 class="h1">Học BJT</h1>
         <button class="btnSmall" id="backHomeBjt">← Home</button>
       </div>
       <p class="sub">Chọn Book</p>
@@ -193,7 +244,7 @@ function renderNgheBjtBook(book) {
   view.innerHTML = `
     <div class="card">
       <div class="cardTitleRow">
-        <h1 class="h1">Nghe BJT — ${book}</h1>
+        <h1 class="h1">Học BJT — ${book}</h1>
         <button class="btnSmall" id="backBjtBooks">← Book</button>
       </div>
       <p class="sub">Chọn CD</p>
@@ -214,10 +265,15 @@ function renderNgheBjtBook(book) {
 }
 
 async function renderNgheBjtCD(book, cd) {
+  if (cd === "CD1") {
+    renderNgheBjtCD1Folders(book);
+    return;
+  }
+
   view.innerHTML = `
     <div class="card">
       <div class="cardTitleRow">
-        <h1 class="h1">Nghe BJT — ${book} / ${cd}</h1>
+        <h1 class="h1">Học BJT — ${book} / ${cd}</h1>
         <button class="btnSmall" id="backBjtList">← CD</button>
       </div>
       <p class="sub">Đang tải...</p>
@@ -257,6 +313,388 @@ async function renderNgheBjtCD(book, cd) {
   } catch (e) {
     document.querySelector(".sub").textContent = `Không tải được danh sách. Kiểm tra file ${BJT_STUDY_BASE_PATH}/${book}/${cd}/list.json.`;
   }
+}
+
+async function loadCd1AnswerRaw(book) {
+  for (const answerBasePath of getCd1AnswerBaseCandidatePaths(book)) {
+    for (const name of CD1_ANSWER_CANDIDATE_FILES) {
+      try {
+        const raw = await loadJSON(`${answerBasePath}/${name}`);
+        return {
+          raw,
+          imageBasePaths: getCd1ImageBaseCandidatePaths(book, answerBasePath),
+          audioBasePaths: getCd1AudioBaseCandidatePaths(book, answerBasePath)
+        };
+      } catch (_) {}
+    }
+  }
+
+  throw new Error("Không tải được file đáp án CD1.");
+}
+
+function parseCd1Number(value) {
+  if (value == null) return null;
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+
+  const m = String(value).match(/\d+/);
+  return m ? parseInt(m[0], 10) : null;
+}
+
+function encodePathParts(path) {
+  return String(path || "")
+    .split("/")
+    .filter((x) => x.length > 0)
+    .map((x) => encodeURIComponent(x))
+    .join("/");
+}
+
+function withUniqueValues(arr) {
+  const out = [];
+  const seen = new Set();
+  arr.forEach((x) => {
+    const v = String(x ?? "").trim();
+    if (!v || seen.has(v)) return;
+    seen.add(v);
+    out.push(v);
+  });
+  return out;
+}
+
+function buildAssetSrcCandidates(basePaths, fileNames) {
+  const joined = (basePaths || []).flatMap((basePath) =>
+    (fileNames || []).map((name) => `${basePath}/${encodePathParts(name)}`)
+  );
+
+  const direct = (fileNames || []).flatMap((name) => {
+    const raw = String(name || "").trim();
+    if (!raw) return [];
+    if (/^https?:\/\//i.test(raw)) return [raw];
+    const trimmed = raw.replace(/^\/+/, "");
+    if (trimmed.includes("/")) {
+      return [`${DATA_BASE_URL}/${encodePathParts(trimmed)}`];
+    }
+    return [];
+  });
+
+  return withUniqueValues([...joined, ...direct]);
+}
+
+function buildCd1ImageFileCandidates(imageFileRaw, number) {
+  const raw = String(imageFileRaw ?? "").trim();
+  const noExt = raw.replace(/\.[^./\\]+$/, "");
+  const pad2 = String(number).padStart(2, "0");
+
+  const extCandidates = [".png", ".jpg", ".jpeg", ".webp"];
+  const baseCandidates = [raw, noExt, String(number), pad2, `CD1-${number}`, `CD1-${pad2}`, `CD1_${number}`, `CD1_${pad2}`];
+
+  const names = [];
+  baseCandidates.forEach((base) => {
+    if (!base) return;
+    names.push(base);
+    if (!/\.[^./\\]+$/.test(base)) {
+      extCandidates.forEach((ext) => names.push(`${base}${ext}`));
+    }
+  });
+
+  return withUniqueValues(names);
+}
+
+function buildCd1AudioFileCandidates(audioFileRaw, number) {
+  const raw = String(audioFileRaw ?? "").trim();
+  const noExt = raw.replace(/\.[^./\\]+$/, "");
+  const pad2 = String(number).padStart(2, "0");
+
+  const extCandidates = [".mp3", ".m4a", ".wav", ".ogg"];
+  const baseCandidates = [
+    raw, noExt, String(number), pad2,
+    `CD1-${number}`, `CD1-${pad2}`, `CD1_${number}`, `CD1_${pad2}`,
+    `BJTchokai_CD1-${number}`, `BJTchokai_CD1-${pad2}`, `BJTchokai_CD1_${number}`, `BJTchokai_CD1_${pad2}`
+  ];
+
+  const names = [];
+  baseCandidates.forEach((base) => {
+    if (!base) return;
+    names.push(base);
+    if (!/\.[^./\\]+$/.test(base)) {
+      extCandidates.forEach((ext) => names.push(`${base}${ext}`));
+    }
+  });
+
+  return withUniqueValues(names);
+}
+
+function normalizeCd1Options(item) {
+  const listLike =
+    item.options || item.choices || item.answers || item.select || item.candidates || item.answer_list || null;
+
+  if (Array.isArray(listLike)) {
+    return listLike.slice(0, 4).map((x) => String(x ?? ""));
+  }
+
+  const keyCandidates = [
+    "a", "b", "c", "d",
+    "A", "B", "C", "D",
+    "option1", "option2", "option3", "option4",
+    "choice1", "choice2", "choice3", "choice4",
+    "answer1", "answer2", "answer3", "answer4"
+  ];
+
+  const out = [];
+  for (const key of keyCandidates) {
+    if (key in item) out.push(String(item[key] ?? ""));
+    if (out.length === 4) break;
+  }
+
+  return out;
+}
+
+function resolveCd1CorrectIndex(rawCorrect, options) {
+  if (!options.length) return -1;
+
+  if (typeof rawCorrect === "number") {
+    if (rawCorrect >= 1 && rawCorrect <= options.length) return rawCorrect - 1;
+    if (rawCorrect >= 0 && rawCorrect < options.length) return rawCorrect;
+  }
+
+  const s = String(rawCorrect ?? "").trim();
+  if (!s) return -1;
+
+  const upper = s.toUpperCase();
+  if (["A", "B", "C", "D"].includes(upper)) return "ABCD".indexOf(upper);
+
+  const num = parseCd1Number(s);
+  if (num != null) {
+    if (num >= 1 && num <= options.length) return num - 1;
+    if (num >= 0 && num < options.length) return num;
+  }
+
+  const byText = options.findIndex((x) => x.trim() === s);
+  return byText;
+}
+
+function pickFirstNonEmpty(item, keys) {
+  for (const key of keys) {
+    const v = item?.[key];
+    if (v == null) continue;
+    const s = String(v).trim();
+    if (s) return s;
+  }
+  return "";
+}
+
+function normalizeCd1Entry(item, idx, imageBasePaths, audioBasePaths) {
+  const number = parseCd1Number(item.ban ?? item.number ?? item.no ?? item.id ?? item.index ?? item.name) ?? (idx + 1);
+  const imageFile = String(
+    item.image ?? item.img ?? item.file ?? item.filename ?? item.photo ?? item.picture ?? `${number}.png`
+  );
+  const audioFile = String(
+    item.audio ?? item.mp3 ?? item.sound ?? item.voice ?? item.listen ?? item.track ?? item.audioFile ?? `${number}.mp3`
+  );
+  const options = normalizeCd1Options(item);
+  const rawCorrect = item.exac ?? item.exact ?? item.correct ?? item.answer;
+  const correctIndex = resolveCd1CorrectIndex(rawCorrect, options);
+  const imageFileCandidates = buildCd1ImageFileCandidates(imageFile, number);
+  const audioFileCandidates = buildCd1AudioFileCandidates(audioFile, number);
+  const imageSrcCandidates = buildAssetSrcCandidates(imageBasePaths, imageFileCandidates);
+  const audioSrcCandidates = buildAssetSrcCandidates(audioBasePaths, audioFileCandidates);
+
+  const script = pickFirstNonEmpty(item, ["script", "transcript", "text", "scrip"]);
+  const questionText = pickFirstNonEmpty(item, ["question", "q", "mondai", "problem"]);
+  const explanation = pickFirstNonEmpty(item, [
+    "memo",
+    "explain", "explanation", "note", "reason",
+    "giaithich", "giai_thich", "giaiThich", "kaisetsu", "setsumei", "comment", "analysis"
+  ]);
+
+  return {
+    number,
+    label: "",
+    imageSrc: imageSrcCandidates[0],
+    imageSrcCandidates,
+    audioSrc: audioSrcCandidates[0] || "",
+    audioSrcCandidates,
+    audioBasePaths,
+    script,
+    questionText,
+    explanation,
+    options,
+    correctIndex
+  };
+}
+
+function normalizeCd1Entries(raw, imageBasePaths, audioBasePaths) {
+  const rows = Array.isArray(raw)
+    ? raw
+    : Array.isArray(raw.items)
+      ? raw.items
+      : Array.isArray(raw.data)
+        ? raw.data
+        : Object.values(raw || {});
+
+  const normalized = rows
+    .filter((x) => x && typeof x === "object")
+    .map((x, idx) => normalizeCd1Entry(x, idx, imageBasePaths, audioBasePaths))
+    .sort((a, b) => a.number - b.number);
+
+  return normalized.filter((x) => x.options.length === 4 && x.correctIndex >= 0);
+}
+
+async function renderNgheBjtCD1Folders(book) {
+  view.innerHTML = `
+    <div class="card">
+      <div class="cardTitleRow">
+        <h1 class="h1">Học BJT — ${book} / CD1</h1>
+        <button class="btnSmall" id="backBjtList">← CD</button>
+      </div>
+      <p class="sub">Đang tải danh sách bài...</p>
+      <div class="grid grid2" id="cd1Folders"></div>
+    </div>
+  `;
+
+  $("#backBjtList").onclick = () => renderNgheBjtBook(book);
+  const box = $("#cd1Folders");
+
+  try {
+    const loaded = await loadCd1AnswerRaw(book);
+    const entries = normalizeCd1Entries(loaded.raw, loaded.imageBasePaths, loaded.audioBasePaths);
+    entries.forEach((entry, idx) => {
+      entry.orderNo = idx + 1;
+      entry.label = `${idx + 1}番`;
+      const pad2 = String(entry.orderNo).padStart(2, "0");
+      const primaryImages = [
+        `${BJT_STUDY_BASE_PATH}/${book}/CD1-image/${pad2}.png`,
+        `${BJT_STUDY_BASE_PATH}/${book}/CD1-image/CD1-${pad2}.png`,
+        `${BJT_STUDY_BASE_PATH}/${book}/CD1-image/BJTchokai_CD1-${pad2}.png`
+      ];
+      entry.imageSrcCandidates = withUniqueValues([...primaryImages, ...(entry.imageSrcCandidates || [])]).slice(0, 8);
+      entry.imageSrc = entry.imageSrcCandidates[0] || "";
+      const primaryAudio = `${BJT_STUDY_BASE_PATH}/${book}/CD1/BJTchokai_CD1-${pad2}.mp3`;
+      entry.audioSrcCandidates = withUniqueValues([primaryAudio, ...(entry.audioSrcCandidates || [])]);
+      entry.audioSrc = entry.audioSrcCandidates[0] || "";
+    });
+
+    document.querySelector(".sub").textContent = entries.length
+      ? "Chọn folder (番) để vào làm bài"
+      : "Không có dữ liệu hợp lệ trong CD1-answer (cần 4 đáp án và trường exac/exact).";
+
+    entries.forEach((entry) => {
+      const btn = document.createElement("button");
+      btn.className = "btn btnBjtCd";
+      btn.textContent = entry.label;
+      btn.onclick = () => renderNgheBjtCD1Exercise(book, entry);
+      box.appendChild(btn);
+    });
+  } catch (e) {
+    document.querySelector(".sub").textContent = "Không tải được CD1-answer. Kiểm tra folder CD1/CD1-answer và file json.";
+  }
+}
+
+function renderNgheBjtCD1Exercise(book, entry) {
+  const correctOptionText = entry.correctIndex >= 0 ? (entry.options[entry.correctIndex] || "") : "";
+  const explanationText = entry.explanation || "Chưa có giải thích.";
+  const hasScriptDetail = !!(entry.script || entry.questionText || correctOptionText || entry.explanation);
+
+  view.innerHTML = `
+    <div class="card">
+      <div class="cardTitleRow">
+        <h1 class="h1">Học BJT — ${book} / CD1 / ${entry.label}</h1>
+        <button class="btnSmall" id="backCd1Folders">← Folder</button>
+      </div>
+      <p class="sub">Chọn 1 đáp án đúng</p>
+      <div class="cd1ImageWrap">
+        <img src="${entry.imageSrc}" alt="${entry.label}" class="cd1Image" id="cd1Image" loading="eager" fetchpriority="high" />
+      </div>
+      <div class="cd1AudioWrap">
+        <audio id="cd1Audio" class="cd1Audio" preload="metadata" controls ${entry.audioSrc ? `src="${entry.audioSrc}"` : ""}></audio>
+      </div>
+      <div class="grid cd1ChoicesRow" id="cd1Choices"></div>
+      <div id="cd1Feedback"></div>
+      <div class="row">
+        <button class="btnSmall" id="toggleCd1Script">${hasScriptDetail ? "Hiện script" : "Không có script"}</button>
+      </div>
+      <div id="cd1ScriptWrap" class="cd1ScriptWrap" style="display:none;">
+        <div class="cd1ScriptTitle">Script</div>
+        <div class="cd1ScriptList">
+          ${entry.script ? `<div><strong>Script:</strong> ${formatMultilineText(entry.script)}</div>` : ""}
+          ${entry.questionText ? `<div><strong>Question:</strong> ${formatMultilineText(entry.questionText)}</div>` : ""}
+          ${entry.options.map((opt, i) => `<div><strong>${i + 1}.</strong> ${formatMultilineText(opt)}</div>`).join("")}
+          ${correctOptionText ? `<div><strong>Đáp án đúng:</strong> ${formatMultilineText(correctOptionText)}</div>` : ""}
+          <div><strong>Giải thích:</strong> ${formatMultilineText(explanationText)}</div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  $("#backCd1Folders").onclick = () => renderNgheBjtCD1Folders(book);
+
+  const img = $("#cd1Image");
+  let imageTry = 0;
+  img.onerror = () => {
+    imageTry += 1;
+    if (imageTry < entry.imageSrcCandidates.length) {
+      img.src = entry.imageSrcCandidates[imageTry];
+    }
+  };
+
+  const audio = $("#cd1Audio");
+  const orderNo = Number(entry.orderNo) || 1;
+  const orderAudioNames = buildCd1AudioFileCandidates(`${orderNo}.mp3`, orderNo);
+  const orderAudioSrcCandidates = buildAssetSrcCandidates(entry.audioBasePaths || [], orderAudioNames);
+  const allAudioCandidates = withUniqueValues([...(entry.audioSrcCandidates || []), ...orderAudioSrcCandidates]).slice(0, 10);
+  if (audio && !audio.getAttribute("src") && allAudioCandidates.length) {
+    audio.src = allAudioCandidates[0];
+    audio.load();
+  }
+  let audioTry = 0;
+  if (audio) {
+    audio.addEventListener("error", () => {
+      audioTry += 1;
+      if (audioTry < allAudioCandidates.length) {
+        audio.src = allAudioCandidates[audioTry];
+        audio.load();
+      }
+    });
+  }
+
+  const box = $("#cd1Choices");
+  const feedback = $("#cd1Feedback");
+  const toggleScriptBtn = $("#toggleCd1Script");
+  const scriptWrap = $("#cd1ScriptWrap");
+  let chosenIndex = -1;
+
+  if (!hasScriptDetail) {
+    toggleScriptBtn.disabled = true;
+  }
+
+  toggleScriptBtn.onclick = () => {
+    if (!hasScriptDetail) return;
+    const isHidden = scriptWrap.style.display === "none";
+    scriptWrap.style.display = isHidden ? "" : "none";
+    toggleScriptBtn.textContent = isHidden ? "Ẩn script" : "Hiện script";
+  };
+
+  entry.options.forEach((option, idx) => {
+    const btn = document.createElement("button");
+    btn.className = "btn cd1Choice cd1ChoiceNumberOnly";
+    btn.innerHTML = `<span class="cd1Tick">${chosenIndex === idx ? "✓" : ""}</span><span class="cd1ChoiceNumber">${idx + 1}</span>`;
+    btn.onclick = () => {
+      chosenIndex = idx;
+      const all = box.querySelectorAll(".cd1Choice");
+      all.forEach((el, i) => {
+        const tick = el.querySelector(".cd1Tick");
+        if (tick) tick.textContent = i === chosenIndex ? "✓" : "";
+      });
+
+      const ok = idx === entry.correctIndex;
+      feedback.innerHTML = `
+        <div class="feedback ${ok ? "ok" : "ng"}">
+          <div class="choiceLine1">${ok ? "Chính xác!" : "Sai rồi, thử lại nhé."}</div>
+          <div class="choiceLine2">Đáp án đúng: ${escapeHtml(entry.options[entry.correctIndex])}</div>
+        </div>
+      `;
+    };
+    box.appendChild(btn);
+  });
 }
 
 function renderLevels(mode) {
@@ -539,6 +977,11 @@ function escapeHtml(s) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function formatMultilineText(s) {
+  const escaped = escapeHtml(String(s ?? ""));
+  return escaped.replace(/(\r\n|\n|\r|\\n|\/n)/g, "<br>");
 }
 
 // ===== Boot =====

@@ -151,3 +151,77 @@ body { margin: 0; background: #0b0e14; color: #e7eaf0; }
 }
 .ngheBjtPlayBtn:hover { background: #3a4560; }
 .ngheBjtAudio { flex: 1; min-width: 0; height: 36px; }
+
+.cd1ImageWrap {
+  margin: 8px 0 14px;
+  border-radius: 12px;
+  border: 1px solid #2a3550;
+  background: #0f1422;
+  padding: 10px;
+}
+.cd1Image {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.cd1AudioWrap {
+  margin: 0 0 14px;
+  border-radius: 12px;
+  border: 1px solid #2a3550;
+  background: #0f1422;
+  padding: 8px 10px;
+}
+.cd1Audio {
+  width: 100%;
+  height: 36px;
+}
+.cd1ChoicesRow {
+  grid-template-columns: repeat(4, 1fr);
+}
+.cd1Choice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cd1ChoiceNumberOnly {
+  justify-content: center;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  min-height: 58px;
+}
+.cd1ChoiceNumber {
+  min-width: 16px;
+}
+.cd1Tick {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 1px solid #2a3550;
+  background: #0f1422;
+  color: #7df2b4;
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+.cd1ScriptWrap {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #2a3550;
+  background: #0f1422;
+}
+.cd1ScriptTitle {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.cd1ScriptList {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  opacity: .92;
+}
