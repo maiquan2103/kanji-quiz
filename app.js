@@ -146,11 +146,82 @@ function renderHome() {
       <div class="grid grid2">
         <button class="btn" id="goVocab">Từ vựng</button>
         <button class="btn" id="goKanji">Chữ Hán</button>
+        <button class="btn" id="goNgheBjt">Nghe BJT</button>
       </div>
     </div>
   `;
   $("#goVocab").onclick = () => renderLevels("vocab");
   $("#goKanji").onclick = () => renderLevels("kanji");
+  $("#goNgheBjt").onclick = () => renderNgheBjt();
+}
+
+function renderNgheBjt() {
+  view.innerHTML = `
+    <div class="card">
+      <div class="cardTitleRow">
+        <h1 class="h1">Nghe BJT</h1>
+        <button class="btnSmall" id="backHomeBjt">← Home</button>
+      </div>
+      <p class="sub">Chọn CD</p>
+      <div class="grid grid2" id="ngheBjtCds"></div>
+    </div>
+  `;
+  $("#backHomeBjt").onclick = () => renderHome();
+  const box = $("#ngheBjtCds");
+  ["CD1", "CD2"].forEach(cd => {
+    const btn = document.createElement("button");
+    btn.className = "btn";
+    btn.textContent = cd;
+    btn.onclick = () => renderNgheBjtCD(cd);
+    box.appendChild(btn);
+  });
+}
+
+async function renderNgheBjtCD(cd) {
+  view.innerHTML = `
+    <div class="card">
+      <div class="cardTitleRow">
+        <h1 class="h1">Nghe BJT — ${cd}</h1>
+        <button class="btnSmall" id="backBjtList">← CD</button>
+      </div>
+      <p class="sub">Đang tải...</p>
+      <div id="ngheBjtTracks"></div>
+    </div>
+  `;
+  $("#backBjtList").onclick = () => renderNgheBjt();
+  const box = $("#ngheBjtTracks");
+  try {
+    const data = await loadJSON(`data/nghe-bjt/${cd}/list.json`);
+    const tracks = Array.isArray(data) ? data : (data.tracks || []);
+    document.querySelector(".sub").textContent = tracks.length ? "Nhấn play để nghe" : "Chưa có file. Thêm file mp3 vào thư mục data/nghe-bjt/" + cd + " và cập nhật list.json (mảng \"tracks\" với tên file).";
+    tracks.forEach((file, i) => {
+      const src = `data/nghe-bjt/${cd}/${encodeURIComponent(file)}`;
+      const wrap = document.createElement("div");
+      wrap.className = "ngheBjtRow";
+      wrap.innerHTML = `
+        <span class="ngheBjtLabel">${i + 1}. ${escapeHtml(file)}</span>
+        <button type="button" class="btnSmall ngheBjtPlay">Phát</button>
+        <audio class="ngheBjtAudio" preload="none" controls data-src="${src}"></audio>
+      `;
+      const audio = wrap.querySelector("audio");
+      const playBtn = wrap.querySelector(".ngheBjtPlay");
+      playBtn.addEventListener("click", () => {
+        document.querySelectorAll("#ngheBjtTracks .ngheBjtAudio").forEach(el => {
+          if (el !== audio) el.pause();
+        });
+        if (!audio.src || !audio.src.length) audio.src = audio.getAttribute("data-src");
+        audio.play();
+      });
+      audio.addEventListener("play", function onPlay() {
+        document.querySelectorAll("#ngheBjtTracks .ngheBjtAudio").forEach(el => {
+          if (el !== audio) el.pause();
+        });
+      });
+      box.appendChild(wrap);
+    });
+  } catch (e) {
+    document.querySelector(".sub").textContent = "Không tải được danh sách. Kiểm tra file data/nghe-bjt/" + cd + "/list.json.";
+  }
 }
 
 function renderLevels(mode) {

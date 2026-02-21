@@ -115,3 +115,17 @@ body { margin: 0; background: #0b0e14; color: #e7eaf0; }
   align-self: center;
 }
 .btnDone:hover { background: #243d2e; }
+
+.ngheBjtRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #2a3550;
+  background: #172038;
+}
+.ngheBjtLabel { flex: 0 0 auto; min-width: 0; font-size: 14px; opacity: .9; }
+.ngheBjtRow .ngheBjtPlay { flex-shrink: 0; }
+.ngheBjtAudio { flex: 1; min-width: 0; height: 36px; }
