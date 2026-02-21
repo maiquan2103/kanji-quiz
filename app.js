@@ -200,11 +200,11 @@ async function renderNgheBjtCD(cd) {
       wrap.className = "ngheBjtRow";
       wrap.innerHTML = `
         <span class="ngheBjtLabel">${i + 1}. ${escapeHtml(file)}</span>
-        <button type="button" class="btnSmall ngheBjtPlay">Phát</button>
+        <button type="button" class="ngheBjtPlayBtn" title="Phát" aria-label="Phát">▶</button>
         <audio class="ngheBjtAudio" preload="none" controls data-src="${src}"></audio>
       `;
       const audio = wrap.querySelector("audio");
-      const playBtn = wrap.querySelector(".ngheBjtPlay");
+      const playBtn = wrap.querySelector(".ngheBjtPlayBtn");
       playBtn.addEventListener("click", () => {
         document.querySelectorAll("#ngheBjtTracks .ngheBjtAudio").forEach(el => {
           if (el !== audio) el.pause();
