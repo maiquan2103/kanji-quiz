@@ -1,4 +1,4 @@
-// ===== Helpers =====
+﻿// ===== Helpers =====
 const $ = (sel) => document.querySelector(sel);
 const view = $("#view");
 const btnHome = $("#btnHome");
@@ -14,23 +14,27 @@ function shuffle(arr) {
 
 const STORAGE_KEY_ACCOUNT = "kanji-quiz:currentAccount";
 const DONE_CONFIG_PATH = "done-config.json";
+const DATA_BASE_URL = "https://raw.githubusercontent.com/maiquan2103/Japanese-file/refs/heads/master";
+const BJT_STUDY_BASE_PATH = `${DATA_BASE_URL}/bjt-study`;
 
 function keyDone(accountId, mode, level, partFile) {
   return `done:${accountId}:${mode}:${level}:${partFile}`;
 }
 
 function partFileToLabel(partFile, mode) {
-  if ((partFile || "").toLowerCase() === "all.json")
+  if ((partFile || "").toLowerCase() === "all.json") {
     return mode === "kanji" ? "Tất cả chữ Hán" : "Tất cả từ vựng";
+  }
   const m = /part(\d+)\.json/i.exec(partFile || "");
   const n = m ? parseInt(m[1], 10) : 0;
-  return n ? `Phần ${n}` : partFile || "";
+  return n ? `Phần ${n}` : (partFile || "");
 }
 
 function setDone(mode, level, partFile, done) {
   if (!state.accountId) return;
   localStorage.setItem(keyDone(state.accountId, mode, level, partFile), done ? "1" : "0");
 }
+
 function isDone(mode, level, partFile) {
   if (!state.accountId) return false;
   return localStorage.getItem(keyDone(state.accountId, mode, level, partFile)) === "1";
@@ -48,15 +52,19 @@ async function loadDoneConfig() {
     if (!res.ok) return;
     const data = await res.json();
     if (!data || !data.accounts) return;
+
     for (const accountId of Object.keys(data.accounts)) {
       const acc = data.accounts[accountId];
       if (!acc || typeof acc !== "object") continue;
+
       for (const mode of Object.keys(acc)) {
         const levels = acc[mode];
         if (!levels || typeof levels !== "object") continue;
+
         for (const level of Object.keys(levels)) {
           const parts = levels[level];
           if (!Array.isArray(parts)) continue;
+
           for (const partFile of parts) {
             localStorage.setItem(keyDone(accountId, mode, level, partFile), "1");
           }
@@ -70,8 +78,8 @@ async function loadDoneConfig() {
 const state = {
   config: null,
   accountId: null,
-  mode: null,   // "vocab" | "kanji"
-  level: null,  // "N5".."N1"
+  mode: null, // "vocab" | "kanji"
+  level: null, // "N5".."N1"
   partFile: null,
   questions: [],
   order: [],
@@ -84,11 +92,6 @@ const state = {
 btnHome.addEventListener("click", () => routeToHome());
 $("#btnLogout")?.addEventListener("click", logout);
 
-function getAccountInput() {
-  const el = document.getElementById("loginInput");
-  return el ? el.value.trim() : "";
-}
-
 function logout() {
   state.accountId = null;
   localStorage.removeItem(STORAGE_KEY_ACCOUNT);
@@ -97,11 +100,12 @@ function logout() {
 }
 
 function updateTopbar(loggedIn) {
-  const btnHome = $("#btnHome");
-  const btnLogout = $("#btnLogout");
+  const home = $("#btnHome");
+  const logoutBtn = $("#btnLogout");
   const userInfo = $("#userInfo");
-  if (btnLogout) btnLogout.style.display = loggedIn ? "" : "none";
-  if (btnHome) btnHome.style.display = loggedIn ? "" : "none";
+
+  if (logoutBtn) logoutBtn.style.display = loggedIn ? "" : "none";
+  if (home) home.style.display = loggedIn ? "" : "none";
   if (userInfo) {
     userInfo.textContent = loggedIn ? state.accountId : "";
     userInfo.style.display = loggedIn ? "" : "none";
@@ -120,8 +124,10 @@ function renderLogin() {
       </form>
     </div>
   `;
+
   const form = $("#loginForm");
   const input = $("#loginInput");
+
   form.onsubmit = (e) => {
     e.preventDefault();
     const id = input.value.trim();
@@ -131,11 +137,14 @@ function renderLogin() {
     updateTopbar(true);
     renderHome();
   };
+
   if (input) input.focus();
 }
 
 function routeToHome() {
-  state.mode = null; state.level = null; state.partFile = null;
+  state.mode = null;
+  state.level = null;
+  state.partFile = null;
   renderHome();
 }
 
@@ -150,6 +159,7 @@ function renderHome() {
       </div>
     </div>
   `;
+
   $("#goVocab").onclick = () => renderLevels("vocab");
   $("#goKanji").onclick = () => renderLevels("kanji");
   $("#goNgheBjt").onclick = () => renderNgheBjt();
@@ -162,71 +172,97 @@ function renderNgheBjt() {
         <h1 class="h1">Nghe BJT</h1>
         <button class="btnSmall" id="backHomeBjt">← Home</button>
       </div>
-      <p class="sub">Chọn CD</p>
-      <div class="grid grid2" id="ngheBjtCds"></div>
+      <p class="sub">Chọn Book</p>
+      <div class="grid grid2" id="ngheBjtBooks"></div>
     </div>
   `;
+
   $("#backHomeBjt").onclick = () => renderHome();
-  const box = $("#ngheBjtCds");
-  ["CD1", "CD2"].forEach(cd => {
+  const box = $("#ngheBjtBooks");
+
+  ["Book1"].forEach((book) => {
     const btn = document.createElement("button");
-    btn.className = "btn";
-    btn.textContent = cd;
-    btn.onclick = () => renderNgheBjtCD(cd);
+    btn.className = "btn btnBjtCd";
+    btn.textContent = book;
+    btn.onclick = () => renderNgheBjtBook(book);
     box.appendChild(btn);
   });
 }
 
-async function renderNgheBjtCD(cd) {
+function renderNgheBjtBook(book) {
   view.innerHTML = `
     <div class="card">
       <div class="cardTitleRow">
-        <h1 class="h1">Nghe BJT — ${cd}</h1>
+        <h1 class="h1">Nghe BJT — ${book}</h1>
+        <button class="btnSmall" id="backBjtBooks">← Book</button>
+      </div>
+      <p class="sub">Chọn CD</p>
+      <div class="grid grid2" id="ngheBjtCds"></div>
+    </div>
+  `;
+
+  $("#backBjtBooks").onclick = () => renderNgheBjt();
+  const box = $("#ngheBjtCds");
+
+  ["CD1", "CD2"].forEach((cd) => {
+    const btn = document.createElement("button");
+    btn.className = "btn btnBjtCd";
+    btn.textContent = cd;
+    btn.onclick = () => renderNgheBjtCD(book, cd);
+    box.appendChild(btn);
+  });
+}
+
+async function renderNgheBjtCD(book, cd) {
+  view.innerHTML = `
+    <div class="card">
+      <div class="cardTitleRow">
+        <h1 class="h1">Nghe BJT — ${book} / ${cd}</h1>
         <button class="btnSmall" id="backBjtList">← CD</button>
       </div>
       <p class="sub">Đang tải...</p>
       <div id="ngheBjtTracks"></div>
     </div>
   `;
-  $("#backBjtList").onclick = () => renderNgheBjt();
+
+  $("#backBjtList").onclick = () => renderNgheBjtBook(book);
   const box = $("#ngheBjtTracks");
+
   try {
-    const data = await loadJSON(`data/nghe-bjt/${cd}/list.json`);
+    const data = await loadJSON(`${BJT_STUDY_BASE_PATH}/${book}/${cd}/list.json`);
     const tracks = Array.isArray(data) ? data : (data.tracks || []);
-    document.querySelector(".sub").textContent = tracks.length ? "Nhấn play để nghe" : "Chưa có file. Thêm file mp3 vào thư mục data/nghe-bjt/" + cd + " và cập nhật list.json (mảng \"tracks\" với tên file).";
+
+    document.querySelector(".sub").textContent = tracks.length
+      ? "Nhấn play để nghe"
+      : `Chưa có file. Thêm file mp3 vào thư mục ${BJT_STUDY_BASE_PATH}/${book}/${cd} và cập nhật list.json (mảng \"tracks\" với tên file).`;
+
     tracks.forEach((file, i) => {
-      const src = `data/nghe-bjt/${cd}/${encodeURIComponent(file)}`;
+      const src = `${BJT_STUDY_BASE_PATH}/${book}/${cd}/${encodeURIComponent(file)}`;
       const wrap = document.createElement("div");
       wrap.className = "ngheBjtRow";
       wrap.innerHTML = `
-        <span class="ngheBjtLabel">${i + 1}. ${escapeHtml(file)}</span>
-        <button type="button" class="ngheBjtPlayBtn" title="Phát" aria-label="Phát">▶</button>
-        <audio class="ngheBjtAudio" preload="none" controls data-src="${src}"></audio>
+        <span class="ngheBjtLabel">${i + 1}番</span>
+        <audio class="ngheBjtAudio" preload="none" controls src="${src}"></audio>
       `;
+
       const audio = wrap.querySelector("audio");
-      const playBtn = wrap.querySelector(".ngheBjtPlayBtn");
-      playBtn.addEventListener("click", () => {
-        document.querySelectorAll("#ngheBjtTracks .ngheBjtAudio").forEach(el => {
-          if (el !== audio) el.pause();
-        });
-        if (!audio.src || !audio.src.length) audio.src = audio.getAttribute("data-src");
-        audio.play();
-      });
-      audio.addEventListener("play", function onPlay() {
-        document.querySelectorAll("#ngheBjtTracks .ngheBjtAudio").forEach(el => {
+      audio.addEventListener("play", () => {
+        document.querySelectorAll("#ngheBjtTracks .ngheBjtAudio").forEach((el) => {
           if (el !== audio) el.pause();
         });
       });
+
       box.appendChild(wrap);
     });
   } catch (e) {
-    document.querySelector(".sub").textContent = "Không tải được danh sách. Kiểm tra file data/nghe-bjt/" + cd + "/list.json.";
+    document.querySelector(".sub").textContent = `Không tải được danh sách. Kiểm tra file ${BJT_STUDY_BASE_PATH}/${book}/${cd}/list.json.`;
   }
 }
 
 function renderLevels(mode) {
   state.mode = mode;
-  const levels = ["N5","N4","N3","N2","N1"].filter(lv => state.config[mode]?.[lv]);
+  const levels = ["N5", "N4", "N3", "N2", "N1"].filter((lv) => state.config[mode]?.[lv]);
+
   view.innerHTML = `
     <div class="card">
       <h1 class="h1">${mode === "vocab" ? "Từ vựng" : "Chữ Hán"} — chọn cấp</h1>
@@ -236,39 +272,48 @@ function renderLevels(mode) {
       </div>
     </div>
   `;
-  $("#backHome").onclick = () => renderHome();
 
+  $("#backHome").onclick = () => renderHome();
   const box = $("#levels");
-  levels.forEach(lv => {
+
+  levels.forEach((lv) => {
     const parts = state.config[mode][lv];
-    const doneCount = parts.filter(p => isDone(mode, lv, p)).length;
+    const doneCount = parts.filter((p) => isDone(mode, lv, p)).length;
     const wrap = document.createElement("div");
     wrap.className = "btnWrap";
     const allDone = doneCount === parts.length;
+
     wrap.innerHTML = `
       <button class="btn btnLevel" type="button">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
-          <div><div class="choiceLine1">${lv}</div><div class="choiceLine2">${doneCount}/${parts.length} phần đã xong</div></div>
+          <div>
+            <div class="choiceLine1">${lv}</div>
+            <div class="choiceLine2">${doneCount}/${parts.length} phần đã xong</div>
+          </div>
           <span class="badge">${parts.length} phần</span>
         </div>
       </button>
       ${!allDone ? `<button class="btnDone" type="button" title="Đánh dấu tất cả đã xong">✓</button>` : ""}
       <button class="btnReset" type="button" title="Reset cấp ${lv}">↺</button>
     `;
+
     wrap.querySelector(".btnLevel").onclick = () => renderParts(mode, lv);
+
     const doneBtn = wrap.querySelector(".btnDone");
     if (doneBtn) {
       doneBtn.onclick = (e) => {
         e.stopPropagation();
-        parts.forEach(p => setDone(mode, lv, p, true));
+        parts.forEach((p) => setDone(mode, lv, p, true));
         renderLevels(mode);
       };
     }
+
     wrap.querySelector(".btnReset").onclick = (e) => {
       e.stopPropagation();
-      parts.forEach(p => setDone(mode, lv, p, false));
+      parts.forEach((p) => setDone(mode, lv, p, false));
       renderLevels(mode);
     };
+
     box.appendChild(wrap);
   });
 }
@@ -292,15 +337,18 @@ function renderParts(mode, level) {
       </div>
     </div>
   `;
+
   $("#backLevels").onclick = () => renderLevels(mode);
   $("#backLevels2").onclick = () => renderLevels(mode);
   $("#backHome").onclick = () => renderHome();
 
   const box = $("#parts");
-  parts.forEach((file, i) => {
+
+  parts.forEach((file) => {
     const done = isDone(mode, level, file);
     const wrap = document.createElement("div");
     wrap.className = "btnWrap";
+
     wrap.innerHTML = `
       <button class="btn btnPart" type="button">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
@@ -313,7 +361,9 @@ function renderParts(mode, level) {
       ${!done ? `<button class="btnDone" type="button" title="Đánh dấu đã xong">✓</button>` : ""}
       <button class="btnReset" type="button" title="Reset phần này">↺</button>
     `;
+
     wrap.querySelector(".btnPart").onclick = () => startGame(mode, level, file);
+
     const doneBtn = wrap.querySelector(".btnDone");
     if (doneBtn) {
       doneBtn.onclick = (e) => {
@@ -322,11 +372,13 @@ function renderParts(mode, level) {
         renderParts(mode, level);
       };
     }
+
     wrap.querySelector(".btnReset").onclick = (e) => {
       e.stopPropagation();
       setDone(mode, level, file, false);
       renderParts(mode, level);
     };
+
     box.appendChild(wrap);
   });
 }
@@ -338,24 +390,23 @@ async function startGame(mode, level, partFile) {
   state.idx = 0;
   state.locked = false;
 
-  const path = `data/${mode}/${level}/${partFile}`;
+  const path = `${DATA_BASE_URL}/${mode}/${level}/${partFile}`;
   const items = await loadJSON(path);
 
-  // Trộn thứ tự câu hỏi mỗi lần vào lại
   state.questions = items;
   state.order = shuffle([...Array(items.length).keys()]);
   renderQuestion();
 }
 
 function buildChoices(correctItem, poolItems) {
-  // correct + 3 distractors từ các item khác
-  const others = poolItems.filter(x =>
+  const others = poolItems.filter((x) =>
     !(x.question === correctItem.question && x.answer1 === correctItem.answer1 && x.answer2 === correctItem.answer2)
   );
+
   const picked = shuffle(others).slice(0, 3);
   const choices = shuffle([correctItem, ...picked]);
 
-  const correctIndex = choices.findIndex(x =>
+  const correctIndex = choices.findIndex((x) =>
     x.question === correctItem.question && x.answer1 === correctItem.answer1 && x.answer2 === correctItem.answer2
   );
 
@@ -367,7 +418,9 @@ function renderQuestion(feedback = null) {
   const qIndex = state.order[state.idx];
   const item = state.questions[qIndex];
 
-  let choices, correctIndex;
+  let choices;
+  let correctIndex;
+
   if (!feedback) {
     const built = buildChoices(item, state.questions);
     choices = built.choices;
@@ -380,6 +433,7 @@ function renderQuestion(feedback = null) {
   }
 
   const partLabel = partFileToLabel(state.partFile, state.mode);
+
   view.innerHTML = `
     <div class="card">
       <div class="questionCenter">
@@ -413,31 +467,35 @@ function renderQuestion(feedback = null) {
   }
 
   const box = $("#choices");
+
   choices.forEach((c, idx) => {
     const btn = document.createElement("button");
     let cls = "btn";
+
     if (feedback) {
       if (feedback.ok && idx === feedback.correctIndex) cls += " choiceCorrect";
       if (!feedback.ok && idx === feedback.chosenIndex) cls += " choiceWrong";
       if (!feedback.ok && idx === feedback.correctIndex) cls += " choiceCorrect";
     }
+
     btn.className = cls;
+
     if (state.mode === "kanji") {
       btn.innerHTML = `<div class="choiceLine1">${escapeHtml(c.answer1 ?? "")}</div><div class="choiceLine2">${escapeHtml(c.answer2 ?? "")}</div>`;
     } else {
       btn.innerHTML = `<div class="choiceLine2">${escapeHtml(c.answer2 ?? "")}</div>`;
     }
-    btn.onclick = () => onAnswer(idx === correctIndex, item, idx, correctIndex);
+
+    btn.onclick = () => onAnswer(idx === correctIndex, idx, correctIndex);
     box.appendChild(btn);
   });
 }
 
-function onAnswer(isCorrect, correctItem, chosenIndex, correctIndex) {
+function onAnswer(isCorrect, chosenIndex, correctIndex) {
   if (state.locked) return;
   state.locked = true;
 
   if (isCorrect) {
-    // Hiển thị đúng + đáp án đúng, tự sang câu tiếp
     renderQuestion({ ok: true, chosenIndex, correctIndex });
 
     setTimeout(() => {
@@ -445,7 +503,6 @@ function onAnswer(isCorrect, correctItem, chosenIndex, correctIndex) {
       state.locked = false;
 
       if (state.idx >= state.order.length) {
-        // Xong phần
         setDone(state.mode, state.level, state.partFile, true);
         renderFinish();
       } else {
@@ -453,7 +510,6 @@ function onAnswer(isCorrect, correctItem, chosenIndex, correctIndex) {
       }
     }, state.mode === "kanji" ? 1000 : 1500);
   } else {
-    // Sai: giữ câu hỏi, hiển thị đáp án đúng bên dưới
     renderQuestion({ ok: false, chosenIndex, correctIndex });
   }
 }
@@ -470,6 +526,7 @@ function renderFinish() {
       </div>
     </div>
   `;
+
   $("#again").onclick = () => startGame(state.mode, state.level, state.partFile);
   $("#toList").onclick = () => renderParts(state.mode, state.level);
   $("#toLevels").onclick = () => renderLevels(state.mode);
@@ -489,6 +546,7 @@ function escapeHtml(s) {
   state.config = await loadJSON("config.json");
   await loadDoneConfig();
   state.accountId = localStorage.getItem(STORAGE_KEY_ACCOUNT);
+
   if (state.accountId) {
     updateTopbar(true);
     renderHome();

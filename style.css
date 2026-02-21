@@ -42,6 +42,12 @@ body { margin: 0; background: #0b0e14; color: #e7eaf0; }
   text-align: left;
 }
 .btn:hover { background: #1b2744; }
+.btnBjtCd {
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
+  padding: 22px 20px;
+}
 .btn.choiceCorrect { background: #1a2e22; border-color: #2d5a3d; }
 .btn.choiceWrong { background: #2a1820; border-color: #8a2f2f; }
 .ghost { padding: 8px 10px; border-radius: 10px; border: 1px solid #2a3550; background: transparent; color: #e7eaf0; cursor: pointer; }
